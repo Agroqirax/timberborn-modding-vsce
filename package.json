@@ -11,6 +11,7 @@
   ],
   "preview": true,
   "icon": "./icon.png",
+  "publisher": "agroqirax",
   "author": {
     "name": "Agroqirax",
     "url": "https://github.com/Agroqirax",
