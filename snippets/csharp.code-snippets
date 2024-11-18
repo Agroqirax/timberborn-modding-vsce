@@ -1,0 +1,14 @@
+{
+  "Using Timberborn": {
+    "prefix": "using timberborn",
+    "body": [
+      "using UnityEngine;",
+      "using Timberborn.ModManagerScene;",
+      "using Timberborn.CoreUI;",
+      "using Timberborn.SingletonSystem;",
+      "using Timberborn.UILayoutSystem;"
+    ],
+    "description": "Import timberborn",
+    "scope": "csharp"
+  }
+}

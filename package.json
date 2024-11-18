@@ -1,0 +1,310 @@
+{
+  "name": "timberborn-modding-ext",
+  "displayName": "Timberborn modding extension",
+  "description": "Json validation for timberborn modding projects",
+  "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "keywords": [
+    "timberborn",
+    "modding",
+    "unity"
+  ],
+  "preview": true,
+  "icon": "./icon.png",
+  "author": {
+    "name": "Agroqirax",
+    "url": "https://github.com/Agroqirax",
+    "email": "rickiedev60@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Agroqirax",
+      "url": "https://github.com/Agroqirax",
+      "email": "rickiedev60@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Agroqirax/timberborn-modding-vsce/issues",
+    "email": "rickiedev60@gmail.com"
+  },
+  "homepage": "https://github.com/Agroqirax/timberborn-modding-vsce",
+  "repository": {
+    "url": "https://github.com/Agroqirax/timberborn-modding-vsce"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonl",
+    "onLanguage:jsonc"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "timberborn-modding-ext.launchGame",
+        "title": "Launch Timberborn",
+        "shortTitle": "Run Timberborn",
+        "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.viewDocs",
+        "title": "View Timberborn Documentation",
+        "shortTitle": "Timberborn docs",
+        "category": "Timberborn"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "timberborn-modding-ext.launchConfig.launcher": {
+          "type": "string",
+          "enum": [
+            "Steam",
+            "Executable"
+          ],
+          "default": "Steam",
+          "description": "Select how to launch the game."
+        },
+        "timberborn-modding-ext.launchConfig.ExecPath": {
+          "type": "string",
+          "default": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Timberborn\\Timberborn.exe",
+          "description": "The executable path for launching the game directly."
+        },
+        "timberborn-modding-ext.launchConfig.args": {
+          "type": "object",
+          "properties": {
+            "settlementName": {
+              "type": "string",
+              "description": "Sets the name of the settlement."
+            },
+            "saveName": {
+              "type": "string",
+              "description": "Sets the name of the save file."
+            },
+            "safe": {
+              "type": "boolean",
+              "default": false,
+              "description": "Launch the game in safe mode."
+            }
+          },
+          "additionalProperties": false,
+          "description": "Arguments for game launch."
+        },
+        "timberborn-modding-ext.docsLinks": {
+          "type": "array",
+          "description": "Additional documentation links to include in the list.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Url": {
+                "type": "string",
+                "description": "The URL of the documentation link.",
+                "pattern": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+              },
+              "Label": {
+                "type": "string",
+                "description": "The label to display for this link."
+              }
+            },
+            "required": [
+              "Url",
+              "Label"
+            ]
+          },
+          "default": []
+        }
+      }
+    },
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./snippets/json.code-snippets"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/specifications.code-snippets"
+      },
+      {
+        "language": "plaintext",
+        "path": "./snippets/csv.code-snippets"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/csharp.code-snippets"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/tapi.code-snippets"
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": [
+          "**/manifest.json"
+        ],
+        "url": "./schema/manifest-schema.json"
+      },
+      {
+        "fileMatch": [
+          "*/workshop_data.json"
+        ],
+        "url": "./schema/workshop_data-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/BonusTypes/BonusTypeSpecification.*.json"
+        ],
+        "url": "./schema/BonusTypeSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Factions/FactionSpecification.*.json"
+        ],
+        "url": "./schema/FactionSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/GoodGroups/GoodGroupSpecification.*.json"
+        ],
+        "url": "./schema/GoodGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Goods/GoodSpecification.*.json"
+        ],
+        "url": "./schema/GoodSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/KeyBindingGroups/KeyBindingGroupSpecification.*.json"
+        ],
+        "url": "./schema/KeyBindingGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/KeyBindings/*/KeyBindingSpecification.*.json"
+        ],
+        "url": "./schema/KeyBindingSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/MaterialGroups/MaterialGroupSpecification.*.json"
+        ],
+        "url": "./schema/MaterialGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/ModelAttachment/*/ModelAttachmentSpecification.*.*.*.json"
+        ],
+        "url": "./schema/ModelAttachmentSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/NeedGroups/NeedGroupSpecification.*.json"
+        ],
+        "url": "./schema/NeedGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Needs/NeedSpecification.*.json"
+        ],
+        "url": "./schema/NeedSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/NeedsAffectedBySoakedness/NeedsAffectedBySoakednessSpecification.*.json"
+        ],
+        "url": "./schema/NeedsAffectedBySoakednessSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/NeedsAffectingWork/NeedsAffectingWorkSpecification.*.json"
+        ],
+        "url": "./schema/NeedsAffectingWorkSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/PrefabGroupSpecification/PrefabGroupSpecification.*.*.json"
+        ],
+        "url": "./schema/PrefabGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Recipes/RecipeSpecification.*.json"
+        ],
+        "url": "./schema/RecipeSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/RemoveYieldStrategies/RemoveYieldStrategySpecification.*.json"
+        ],
+        "url": "./schema/RemoveYieldStrategySpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/TailDecals/TailDecalSpecification.*.*.json"
+        ],
+        "url": "./schema/TailDecalSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/ToolGroups/ToolGroupSpecification.*.*.json"
+        ],
+        "url": "./schema/ToolgroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/WellbeingTiers/WellbeingTierSpecification.*.*.json"
+        ],
+        "url": "./schema/WellbeingTierSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/WorkerOutfits/WorkerOutfitSpecification.*.*.*.json"
+        ],
+        "url": "./schema/WorkerOutfitSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/WorkerTypes/WorkerTypeSpecification.*.*.json"
+        ],
+        "url": "./schema/WorkerTypeSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/YieldRemovalChanceBonuses/YieldRemovalChanceBonusSpecification.*.*.json"
+        ],
+        "url": "./schema/YieldRemovalChanceBonusSpecification-schema.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.6",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.95.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "csv-parse": "^5.5.6"
+  }
+}

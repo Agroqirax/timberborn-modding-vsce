@@ -1,0 +1,9 @@
+{
+  "Localization Template": {
+    "prefix": "localization-template",
+    "body": ["ID,Text,Comment", ",,"],
+    "description": "Template for localization csv file",
+    "isFileTemplate": true,
+    "scope": "csv,txt"
+  }
+}
