@@ -2,7 +2,7 @@
   "name": "timberborn-modding-ext",
   "displayName": "Timberborn modding extension",
   "description": "Json validation for timberborn modding projects",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "SEE LICENSE IN LICENSE.md",
   "keywords": [
     "timberborn",
@@ -44,6 +44,12 @@
     "onLanguage:jsonl",
     "onLanguage:jsonc"
   ],
+  "extensionPack": [
+    "visualstudiotoolsforunity.vstuc",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -58,54 +64,72 @@
         "title": "View Timberborn Documentation",
         "shortTitle": "Timberborn docs",
         "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.hide-meta",
+        "title": "Hide unity .meta Files",
+        "shortTitle": "Hide .meta files",
+        "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.translateLocalizations",
+        "title": "Translate localizations",
+        "shortTitle": "Translate mod",
+        "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.projectSetup",
+        "title": "Create project files",
+        "shortTitle": "Project setup",
+        "category": "Timberborn"
       }
     ],
     "configuration": {
       "properties": {
         "timberborn-modding-ext.launchConfig.launcher": {
           "type": "string",
+          "description": "Select how to launch the game",
           "enum": [
             "Steam",
             "Executable"
           ],
-          "default": "Steam",
-          "description": "Select how to launch the game."
+          "default": "Steam"
         },
         "timberborn-modding-ext.launchConfig.ExecPath": {
           "type": "string",
-          "default": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Timberborn\\Timberborn.exe",
-          "description": "The executable path for launching the game directly."
+          "description": "The executable path for launching the game directly",
+          "default": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Timberborn\\Timberborn.exe"
         },
         "timberborn-modding-ext.launchConfig.args": {
           "type": "object",
+          "description": "Arguments for game launch",
           "properties": {
             "settlementName": {
               "type": "string",
-              "description": "Sets the name of the settlement."
+              "description": "Sets the name of the settlement"
             },
             "saveName": {
               "type": "string",
-              "description": "Sets the name of the save file."
+              "description": "Sets the name of the save file"
             },
             "safe": {
               "type": "boolean",
               "default": false,
-              "description": "Launch the game in safe mode."
+              "description": "Launch the game in safe mode"
             }
           },
-          "additionalProperties": false,
-          "description": "Arguments for game launch."
+          "additionalProperties": false
         },
         "timberborn-modding-ext.docsLinks": {
           "type": "array",
-          "description": "Additional documentation links to include in the list.",
+          "description": "Additional documentation links to include in the list",
           "items": {
             "type": "object",
             "properties": {
               "Url": {
                 "type": "string",
                 "description": "The URL of the documentation link.",
-                "pattern": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+                "format": "uri"
               },
               "Label": {
                 "type": "string",
@@ -118,6 +142,97 @@
             ]
           },
           "default": []
+        },
+        "timberborn-modding-ext.translator": {
+          "type": "object",
+          "description": "Translator config",
+          "properties": {
+            "srcLangCode": {
+              "type": "string",
+              "description": "The source file language",
+              "minLength": 1,
+              "enum": [
+                "deDE",
+                "enUS",
+                "esES",
+                "frFR",
+                "itIT",
+                "jaJP",
+                "koKR",
+                "plPL",
+                "ptBR",
+                "ruRU",
+                "thTH",
+                "trTR",
+                "ukUA",
+                "zhCN",
+                "zhTW"
+              ],
+              "default": "enUS"
+            },
+            "destLangCodes": {
+              "type": "array",
+              "description": "All languages to translate to",
+              "minItems": 1,
+              "items": {
+                "required": [],
+                "properties": {},
+                "minLength": 4,
+                "maxLength": 4,
+                "examples": [
+                  "deDE",
+                  "enUS",
+                  "esES",
+                  "frFR",
+                  "itIT",
+                  "jaJP",
+                  "koKR",
+                  "plPL",
+                  "ptBR",
+                  "ruRU",
+                  "thTH",
+                  "trTR",
+                  "ukUA",
+                  "zhCN",
+                  "zhTW",
+                  "nlNL"
+                ]
+              }
+            },
+            "fileNameSuffix": {
+              "type": "string",
+              "description": "The suffix for the translation files",
+              "default": "MyMod",
+              "minLength": 1
+            },
+            "fileType": {
+              "type": "string",
+              "description": "Localization file type",
+              "minLength": 1,
+              "enum": [
+                "csv",
+                "txt"
+              ],
+              "default": "csv"
+            },
+            "localizationsDirectory": {
+              "type": "string",
+              "description": "Localizations file folder",
+              "minLength": 1,
+              "examples": [
+                "/Data/Localizations",
+                "/Localizations"
+              ],
+              "format": "path"
+            }
+          },
+          "required": [
+            "srcLangCode",
+            "destLangCodes",
+            "fileNameSuffix",
+            "fileType",
+            "localizationsDirectory"
+          ]
         }
       }
     },
@@ -306,6 +421,8 @@
   },
   "dependencies": {
     "adm-zip": "^0.5.16",
-    "csv-parse": "^5.5.6"
+    "axios": "^1.7.7",
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.1"
   }
 }

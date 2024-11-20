@@ -16,27 +16,31 @@ code --install-extension agroqirax.timberborn-modding-ext
 
 - ✅ Json validation for specifications
 - ✏️ Json autocomplete for specifications
-- ✍️ Json, C# & TAPI snippets
-- 🚀 Launch game command & custom launch config
-- 📖 Quick links to documentation & custom links
+- ✍️ Json, csv, C# & TAPI snippets
+- 🚀 Launch game command with custom launch config
+- ✨ Csv translate tool (not perfect, always check accuracy!)
+- 📁 Project setup tool
+- 🗑️ Hide unity .meta files tool
+- 📖 Quick links to documentation with custom links
 
 ### Ideas
 
-- ✨ Csv auto translate tool
+- 🙋‍♂️ Walktroughs
 - 📷 Asset paths verification
 - 🌍 Localization key verification
 - 👆 Localization value tooltip
 - 🪵 Error log viewer
 - 👀 Timber file viewer
+- 🎨 Color, icon & product theme
 
 ## Contributing
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
+See [`contributing.md`](CONTRIBUTING.md) for ways to get started.
 
-Please adhere to this project's `code of conduct`.
+Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT license, see [LICENSE.md](LICENSE.md).
