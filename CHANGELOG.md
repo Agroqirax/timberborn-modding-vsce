@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.0.3] - 2024-11-20
+
+### Added
+
+- Walktroughs
+
 ## [v0.0.2] - 2024-11-19
 
 ### Added

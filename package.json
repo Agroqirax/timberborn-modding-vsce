@@ -2,7 +2,7 @@
   "name": "timberborn-modding-ext",
   "displayName": "Timberborn modding extension",
   "description": "Json validation for timberborn modding projects",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE.md",
   "keywords": [
     "timberborn",
@@ -66,7 +66,7 @@
         "category": "Timberborn"
       },
       {
-        "command": "timberborn-modding-ext.hide-meta",
+        "command": "timberborn-modding-ext.hideMeta",
         "title": "Hide unity .meta Files",
         "shortTitle": "Hide .meta files",
         "category": "Timberborn"
@@ -196,6 +196,11 @@
                   "zhCN",
                   "zhTW",
                   "nlNL"
+                ],
+                "default": [
+                  "deDE",
+                  "frFR",
+                  "zhCN"
                 ]
               }
             },
@@ -396,6 +401,115 @@
           "**/Specifications/YieldRemovalChanceBonuses/YieldRemovalChanceBonusSpecification.*.*.json"
         ],
         "url": "./schema/YieldRemovalChanceBonusSpecification-schema.json"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "timberborn-modding-ext-getting-started",
+        "title": "Get Started with modding extension",
+        "description": "Learn about the features of this extension",
+        "steps": [
+          {
+            "id": "project-setup",
+            "title": "Project setup",
+            "description": "You can generate the project files to get started quickly\n[Try it out](command:timberborn-modding-ext.projectSetup)",
+            "media": {
+              "svg": "walktrough/folder-icon.svg",
+              "altText": "Folder icon"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.projectSetup"
+            ]
+          },
+          {
+            "id": "json-validation",
+            "title": "Json validation",
+            "description": "This extension will check the specification files for potential errors and help with autocomplete",
+            "media": {
+              "svg": "walktrough/json-icon.svg",
+              "altText": "Json object icon"
+            },
+            "completionEvents": [
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "code-snippets",
+            "title": "Code snippets",
+            "description": "This extension adds snippets for specification, translation and code files",
+            "media": {
+              "svg": "walktrough/snippet-icon.svg",
+              "altText": "Snippet icon"
+            },
+            "completionEvents": [
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "launch-game",
+            "title": "Launch game",
+            "description": "You can launch the game from the command palette\n[Try it out](command:timberborn-modding-ext.launchGame)\nThe launch parameters are configurable in settings",
+            "media": {
+              "svg": "walktrough/launch-icon.svg",
+              "altText": "Rocket icon"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.launchGame"
+            ]
+          },
+          {
+            "id": "translate-localizations",
+            "title": "Translate localizations",
+            "description": "You can auto translate the localizations\n[Try it out](command:timberborn-modding-ext.translateLocalizations)\nThe translation parameters are configurable in settings",
+            "media": {
+              "svg": "walktrough/translate-icon.svg",
+              "altText": "Translate icon"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.translateLocalizations"
+            ]
+          },
+          {
+            "id": "documentation-links",
+            "title": "Documentation links",
+            "description": "You can quickly open the documentation\n[Try it out](command:timberborn-modding-ext.viewDocs)\nYou can add more links in settings",
+            "media": {
+              "svg": "walktrough/open-icon.svg",
+              "altText": "Open icon"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.viewDocs"
+            ]
+          },
+          {
+            "id": "hide-meta",
+            "title": "Hide unity meta files",
+            "description": "Hide unity meta files from the explorer\n[Try it out](command:timberborn-modding-ext.hideMeta)",
+            "media": {
+              "svg": "walktrough/description-icon.svg",
+              "altText": "Open icon"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.hideMeta",
+              "onSettingChanged:files.exclude"
+            ]
+          },
+          {
+            "id": "timberborn-themes",
+            "title": "Themes",
+            "disables": true,
+            "description": "Use the timberborn themes\n[Set color theme](command:workbench.action.selectTheme)\n[Set file icon theme](command:workbench.action.selectIconTheme)\n[Set product icon theme](command:workbench.action.selectProductIconTheme)",
+            "media": {
+              "svg": "walktrough/color-icon.svg",
+              "altText": "Open icon"
+            },
+            "completionEvents": [
+              "onCommand:workbench.action.selectTheme",
+              "onCommand:workbench.action.selectIconTheme",
+              "onCommand:workbench.action.selectProductIconTheme"
+            ]
+          }
+        ]
       }
     ]
   },

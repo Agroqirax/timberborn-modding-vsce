@@ -14,18 +14,17 @@ code --install-extension agroqirax.timberborn-modding-ext
 
 ## Features
 
-- ✅ Json validation for specifications
-- ✏️ Json autocomplete for specifications
+- ✅ Json validation
+- ✏️ Json autocomplete
 - ✍️ Json, csv, C# & TAPI snippets
 - 🚀 Launch game command with custom launch config
-- ✨ Csv translate tool (not perfect, always check accuracy!)
-- 📁 Project setup tool
-- 🗑️ Hide unity .meta files tool
+- ✨ Csv translate command (not perfect, always check accuracy!)
+- 📁 Project setup command
+- 🗑️ Hide unity .meta files command
 - 📖 Quick links to documentation with custom links
 
 ### Ideas
 
-- 🙋‍♂️ Walktroughs
 - 📷 Asset paths verification
 - 🌍 Localization key verification
 - 👆 Localization value tooltip

@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(viewDocs);
 
   const hideMeta = vscode.commands.registerCommand(
-    "timberborn-modding-ext.hide-meta",
+    "timberborn-modding-ext.hideMeta",
     hideMetaCommand
   );
   context.subscriptions.push(hideMeta);
