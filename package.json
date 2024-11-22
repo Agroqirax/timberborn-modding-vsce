@@ -2,12 +2,16 @@
   "name": "timberborn-modding-ext",
   "displayName": "Timberborn modding extension",
   "description": "Json validation for timberborn modding projects",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "SEE LICENSE IN LICENSE.md",
   "keywords": [
     "timberborn",
     "modding",
     "unity"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
   ],
   "preview": true,
   "icon": "./icon.png",
@@ -208,6 +212,14 @@
               "type": "string",
               "description": "The suffix for the translation files",
               "default": "MyMod",
+              "pattern": "^([^_]*$)",
+              "not": {
+                "enum": [
+                  "names",
+                  "wip",
+                  "donottranslate"
+                ]
+              },
               "minLength": 1
             },
             "fileType": {

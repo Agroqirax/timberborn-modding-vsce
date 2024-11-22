@@ -1,10 +1,17 @@
 # Changelog
 
+## [v0.0.4] - 2024-11-22
+
+### Added
+
+- Localization key verification
+- Localization value tooltip
+
 ## [v0.0.3] - 2024-11-20
 
 ### Added
 
-- Walktroughs
+- Walktrough
 
 ## [v0.0.2] - 2024-11-19
 

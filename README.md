@@ -22,15 +22,15 @@ code --install-extension agroqirax.timberborn-modding-ext
 - 📁 Project setup command
 - 🗑️ Hide unity .meta files command
 - 📖 Quick links to documentation with custom links
+- 🌍 Localization key verification
+- 👆 Localization value tooltip
 
 ### Ideas
 
 - 📷 Asset paths verification
-- 🌍 Localization key verification
-- 👆 Localization value tooltip
 - 🪵 Error log viewer
 - 👀 Timber file viewer
-- 🎨 Color, icon & product theme
+- 🎨 Themes
 
 ## Contributing
 
