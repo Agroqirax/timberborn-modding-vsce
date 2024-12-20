@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Worker outfit specification",
+  "description": "Add or modify a worker outfit",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "Worker outfit ID",
+      "minLength": 1,
+      "examples": ["Builder", "Farmer", "Hauler", "Pilot"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "FactionId": {
+      "type": "string",
+      "description": "Faction ID",
+      "minLength": 1,
+      "examples": ["Folktails", "IronTeeth"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "WorkerType": {
+      "type": "string",
+      "description": "Worker type",
+      "minLength": 1,
+      "examples": ["Beaver", "Bot"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "DiffuseTexture": {
+      "type": "string",
+      "description": "Diffuse texture",
+      "minLength": 1,
+      "examples": [
+        "Materials/Beavers/Common/WorkerOutfits/WorkersHammerStrings_D",
+        "Materials/Beavers/Common/WorkerOutfits/HaulerBackpackStrings_D"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+    },
+    "NormalTexture": {
+      "type": "string",
+      "description": "Normal texture",
+      "minLength": 1,
+      "examples": [
+        "Materials/Beavers/Common/WorkerOutfits/WorkersHammerStrings_N",
+        "Materials/Beavers/Common/WorkerOutfits/HaulerBackpackStrings_N"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+    },
+    "Attachments": {
+      "type": "array",
+      "description": "Attachements",
+      "items": {
+        "examples": [
+          "HammerBack.Beaver",
+          "HammerBack.Bot",
+          "FarmerHat.Beaver.Folktails",
+          "FarmerHat.Beaver.IronTeeth",
+          "FarmerHat.Bot.Folktail",
+          "FarmerHat.Bot.IronTeeth",
+          "PilotHelmet.Beaver.IronTeeth",
+          "PilotHelmet.Bot.IronTeeth"
+        ],
+        "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+      }
+    },
+    "Attachments#append": {
+      "type": "array",
+      "description": "Append attachements",
+      "items": {
+        "examples": [
+          "HammerBack.Beaver",
+          "HammerBack.Bot",
+          "FarmerHat.Beaver.Folktails",
+          "FarmerHat.Beaver.IronTeeth",
+          "FarmerHat.Bot.Folktail",
+          "FarmerHat.Bot.IronTeeth",
+          "PilotHelmet.Beaver.IronTeeth",
+          "PilotHelmet.Bot.IronTeeth"
+        ],
+        "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+      }
+    },
+    "Attachments#remove": {
+      "type": "array",
+      "description": "ARemove atachements",
+      "items": {
+        "examples": [
+          "HammerBack.Beaver",
+          "HammerBack.Bot",
+          "FarmerHat.Beaver.Folktails",
+          "FarmerHat.Beaver.IronTeeth",
+          "FarmerHat.Bot.Folktail",
+          "FarmerHat.Bot.IronTeeth",
+          "PilotHelmet.Beaver.IronTeeth",
+          "PilotHelmet.Bot.IronTeeth"
+        ],
+        "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+      }
+    }
+  },
+  "required": ["Id", "FactionId", "WorkerType"],
+  "minProperties": 4
+}

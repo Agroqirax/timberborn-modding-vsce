@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Bonus type specification",
+  "description": "Add or modify a bonus type",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "The bonus to modify",
+      "minLength": 1,
+      "examples": [
+        "CarryingCapacity",
+        "CuttingSuccessChance",
+        "GrowthSpeed",
+        "LifeExpectancy",
+        "MovementSpeed",
+        "WorkingSpeed"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "LocKey": {
+      "type": "string",
+      "description": "Bonus type name loc key",
+      "minLength": 1,
+      "examples": [
+        "Bonus.CarryingCapacity",
+        "Bonus.CuttingSuccessChance",
+        "Bonus.GrowthSpeed",
+        "Bonus.LifeExpectancy",
+        "Bonus.MovementSpeed",
+        "Bonus.WorkingSpeed"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "MinimumValue": {
+      "type": "number",
+      "description": "Lowest possible value"
+    },
+    "MaximumValue": {
+      "type": "number",
+      "description": "Highest possible value"
+    },
+    "Icon": {
+      "type": "string",
+      "description": "Bonus icon",
+      "minLength": 1,
+      "default": "Sprites/Bonuses/BONUS"
+    }
+  },
+  "required": ["Id", "LocKey", "MinimumValue"]
+}

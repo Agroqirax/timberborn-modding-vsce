@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Needs affecting work specification",
+  "description": "Add or modify a need affecting work",
+  "type": "object",
+  "properties": {
+    "NeedId": {
+      "type": "string",
+      "description": "Need ID to be modified",
+      "minLength": 1,
+      "examples": ["BadwaterContamination", "Biofuel", "Energy", "Injury"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "CriticalStatePreventsWork": {
+      "type": "boolean",
+      "description": "Refuse work if need isn't met",
+      "default": false
+    },
+    "WorkRefusalWarningLocKey": {
+      "type": "string",
+      "description": "Work refusal warning loc key",
+      "minLength": 1,
+      "examples": ["Work.WorkRefusalWarning"],
+      "default": "Work.WorkRefusalWarning",
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    }
+  },
+  "required": [
+    "NeedId",
+    "CriticalStatePreventsWork",
+    "WorkRefusalWarningLocKey"
+  ]
+}

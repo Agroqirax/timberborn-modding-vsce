@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Wellbeing tier specification",
+  "description": "Add or modify a wellbeing tier",
+  "type": "object",
+  "properties": {
+    "CharacterType": {
+      "type": "string",
+      "description": "Character type affected",
+      "minLength": 1,
+      "examples": ["BeaverAdult", "BeaverChild", "Bot"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "BonusId": {
+      "type": "string",
+      "description": "Bonus to modify",
+      "minLength": 1,
+      "examples": [
+        "LifeExpectancy",
+        "MovementSpeed",
+        "WorkingSpeed",
+        "GrowthSpeed"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "Bonuses": {
+      "type": "array",
+      "description": "Applied bonuses",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": ["Wellbeing", "Multiplier"],
+        "properties": {
+          "Wellbeing": {
+            "type": "number",
+            "description": "Wellbeing level"
+          },
+          "Multiplier": {
+            "type": "number",
+            "description": "Applied multiplier"
+          }
+        }
+      }
+    },
+    "Bonuses#append": {
+      "type": "array",
+      "description": "Append applied bonuses",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": ["Wellbeing", "Multiplier"],
+        "properties": {
+          "Wellbeing": {
+            "type": "number",
+            "description": "Wellbeing level"
+          },
+          "Multiplier": {
+            "type": "number",
+            "description": "Applied multiplier"
+          }
+        }
+      }
+    },
+    "Bonuses#remove": {
+      "type": "array",
+      "description": "Remove applied bonuses",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": ["Wellbeing", "Multiplier"],
+        "properties": {
+          "Wellbeing": {
+            "type": "number",
+            "description": "Wellbeing level"
+          },
+          "Multiplier": {
+            "type": "number",
+            "description": "Applied multiplier"
+          }
+        }
+      }
+    },
+    "WellbeingThreshold": {
+      "type": "number",
+      "description": "Wellbeing threshold"
+    },
+    "MultiplierIncrement": {
+      "type": "number",
+      "description": "Wellbeing increment"
+    }
+  },
+  "required": [
+    "CharacterType",
+    "BonusId",
+    "Bonuses",
+    "WellbeingThreshold",
+    "MultiplierIncrement"
+  ]
+}

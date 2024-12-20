@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Save metadata",
+  "description": "Metadata for saves",
+  "type": "object",
+  "properties": {
+    "Timestamp": {
+      "type": "string",
+      "description": "Save timestamp",
+      "minLength": 1
+    },
+    "Cycle": {
+      "type": "number",
+      "description": "Cycle number"
+    },
+    "Day": {
+      "type": "number",
+      "description": "Day number"
+    },
+    "SavedMods": {
+      "type": "array",
+      "description": "Saved mods",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": ["Id", "Name", "Version"],
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Mod ID",
+            "minLength": 1
+          },
+          "Name": {
+            "type": "string",
+            "description": "Mod name",
+            "minLength": 1
+          },
+          "Version": {
+            "type": "string",
+            "description": "Mod version",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "required": ["Timestamp", "Cycle", "Day", "SavedMods"]
+}

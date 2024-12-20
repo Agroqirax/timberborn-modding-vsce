@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Toolgroup specification",
+  "description": "Add or modify a toolgroup",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "Tool group ID",
+      "minLength": 1,
+      "examples": [
+        "Decoration",
+        "DistrictManagement",
+        "Food",
+        "Housing",
+        "Landscaping",
+        "MapEditor",
+        "Metal",
+        "Monuments",
+        "NaturalOverhangs",
+        "Other",
+        "Paths",
+        "Power",
+        "Ruins",
+        "Science",
+        "Storage",
+        "Water",
+        "Wellbeing",
+        "Wood"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "Order": {
+      "type": "string",
+      "description": "Place on the toolbar",
+      "minLength": 1
+    },
+    "NameLocKey": {
+      "type": "string",
+      "description": "Tool group name loc key",
+      "minLength": 1,
+      "examples": [
+        "ToolGroups.Decoration",
+        "ToolGroups.DistrictManagement",
+        "ToolGroups.Food",
+        "ToolGroups.Housing",
+        "ToolGroups.Landscaping",
+        "ToolGroups.MapEditor",
+        "ToolGroups.Metal",
+        "ToolGroups.Monuments",
+        "ToolGroups.NaturalOverhangs",
+        "ToolGroups.Other",
+        "ToolGroups.Paths",
+        "ToolGroups.Power",
+        "ToolGroups.Ruins",
+        "ToolGroups.Science",
+        "ToolGroups.Storage",
+        "ToolGroups.Water",
+        "ToolGroups.Wellbeing",
+        "ToolGroups.Wood"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "Icon": {
+      "type": "string",
+      "description": "Tool group icon path",
+      "minLength": 1,
+      "examples": [
+        "Sprites/BottomBar/BuildingGroups/Decoration",
+        "Sprites/BottomBar/BuildingGroups/DistrictManagement",
+        "Sprites/BottomBar/BuildingGroups/Food",
+        "Sprites/BottomBar/BuildingGroups/Housing",
+        "Sprites/BottomBar/BuildingGroups/Landscaping",
+        "Sprites/BottomBar/BuildingGroups/MapEditor",
+        "Sprites/BottomBar/BuildingGroups/Metal",
+        "Sprites/BottomBar/BuildingGroups/Monuments",
+        "Sprites/BottomBar/BuildingGroups/NaturalOverhangs",
+        "Sprites/BottomBar/BuildingGroups/Other",
+        "Sprites/BottomBar/BuildingGroups/Paths",
+        "Sprites/BottomBar/BuildingGroups/Power",
+        "Sprites/BottomBar/BuildingGroups/Ruins",
+        "Sprites/BottomBar/BuildingGroups/Science",
+        "Sprites/BottomBar/BuildingGroups/Storage",
+        "Sprites/BottomBar/BuildingGroups/Water",
+        "Sprites/BottomBar/BuildingGroups/Wellbeing",
+        "Sprites/BottomBar/BuildingGroups/Wood"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+    },
+    "FallbackGroup": {
+      "type": "boolean",
+      "description": "Fallback group",
+      "default": false
+    }
+  },
+  "required": ["Id", "Order", "NameLocKey", "Icon", "FallbackGroup"]
+}

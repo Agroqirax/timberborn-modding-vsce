@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Keybindinggroup specification",
+  "description": "Add or modify a keybinding group",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "Keybind group ID to be modified",
+      "minLength": 1,
+      "examples": [
+        "Buildings",
+        "Camera",
+        "Dev",
+        "Internal",
+        "MapEditor",
+        "Objects",
+        "SettlementPanel",
+        "Time",
+        "UI"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "Order": {
+      "type": "number",
+      "description": "Place in the settings menu"
+    },
+    "LocKey": {
+      "type": "string",
+      "description": "Group name loc key",
+      "minLength": 1,
+      "examples": [
+        "KeyBindingGroup.Buildings",
+        "KeyBindingGroup.Camera",
+        "KeyBindingGroup.Dev",
+        "KeyBindingGroup.Internal",
+        "KeyBindingGroup.MapEditor",
+        "KeyBindingGroup.Objects",
+        "KeyBindingGroup.SettlementPanel",
+        "KeyBindingGroup.Time",
+        "KeyBindingGroup.UI"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    }
+  },
+  "required": ["Id", "Order", "LocKey"]
+}

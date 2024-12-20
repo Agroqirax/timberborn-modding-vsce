@@ -1,0 +1,588 @@
+{
+  "name": "timberborn-modding-ext",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
+  "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "keywords": [
+    "timberborn",
+    "modding",
+    "mods",
+    "unity"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "preview": true,
+  "icon": "./icon.png",
+  "publisher": "agroqirax",
+  "author": {
+    "name": "Agroqirax",
+    "url": "https://github.com/agroqirax"
+  },
+  "contributors": [
+    {
+      "name": "Agroqirax",
+      "url": "https://github.com/agroqirax"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/agroqirax/timberborn-modding-vsce/issues"
+  },
+  "homepage": "https://github.com/agroqirax/timberborn-modding-vsce",
+  "repository": {
+    "url": "https://github.com/agroqirax/timberborn-modding-vsce"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Snippets",
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:json",
+    "onLanguage:jsonl",
+    "onLanguage:jsonc",
+    "onFileSystem:*.timber",
+    "onView:timberViewer.editor"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "timberborn-modding-ext.launchGame",
+        "title": "%commands.launch-timberborn.title%",
+        "shortTitle": "%commands.launch-timberborn.short-title%",
+        "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.openDocsLinks",
+        "title": "%commands.open-docs.title%",
+        "shortTitle": "%commands.open-docs.short-title%",
+        "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.translateLocalizations",
+        "title": "%commands.translate-localizations.title%",
+        "shortTitle": "%commands.translate-localizations.short-title%",
+        "category": "Timberborn"
+      },
+      {
+        "command": "timberborn-modding-ext.projectSetup",
+        "title": "%commands.project-setup.title%",
+        "shortTitle": "%commands.project-setup.short-title%",
+        "category": "Timberborn"
+      }
+    ],
+    "configuration": {
+      "title": "Timberborn",
+      "properties": {
+        "timberborn-modding-ext.execPath": {
+          "type": "string",
+          "scope": "machine",
+          "description": "%configuration.exec-path.description%",
+          "default": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Timberborn\\Timberborn.exe",
+          "format": "path"
+        },
+        "timberborn-modding-ext.launchArgs": {
+          "type": "object",
+          "scope": "machine-overridable",
+          "description": "%configuration.launch-args.description%",
+          "properties": {
+            "settlementName": {
+              "type": "string",
+              "description": "%configuration.launch-args.settlement-name.description%",
+              "minLength": 1
+            },
+            "saveName": {
+              "type": "string",
+              "description": "%configuration.launch-args.save-name.description%",
+              "minLength": 1
+            },
+            "safe": {
+              "type": "boolean",
+              "default": false,
+              "description": "%configuration.launch-args.safe.description%"
+            }
+          },
+          "default": {
+            "safe": false
+          },
+          "additionalProperties": false
+        },
+        "timberborn-modding-ext.docsLinks": {
+          "type": "array",
+          "scope": "resource",
+          "description": "%configuration.docs-links.description%",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "description": "%configuration.docs-links.label.description%",
+                "examples": [
+                  "Youtube"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "description": "%configuration.docs-links.description.description%",
+                "examples": [
+                  "youtube.com"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "description": "%configuration.docs-links.url.description%",
+                "examples": [
+                  "https://youtube.com"
+                ],
+                "format": "uri"
+              }
+            },
+            "required": [
+              "url",
+              "label"
+            ]
+          },
+          "default": [
+            {
+              "label": "YouTube Tutorials",
+              "description": "youtube.com",
+              "url": "https://www.youtube.com/playlist?list=PLCSAr-ZkwfVQZlUN_m3gCRqljfAKUCPpo"
+            },
+            {
+              "label": "Github timberborn-modding",
+              "description": "github.com/timberborn-modding",
+              "url": "https://github.com/mechanistry/timberborn-modding"
+            },
+            {
+              "label": "Github modding central",
+              "description": "github.com/Timberborn-Modding-Central",
+              "url": "https://github.com/Timberborn-Modding-Central"
+            },
+            {
+              "label": "Unity documentation",
+              "description": "docs.unity3d.com",
+              "url": "https://docs.unity3d.com/ScriptReference/index.html"
+            },
+            {
+              "label": "Official Wiki",
+              "description": "timberborn.wiki.gg",
+              "url": "https://timberborn.wiki.gg/wiki/Timberborn_Wiki"
+            },
+            {
+              "label": "Reddit",
+              "description": "reddit.com/r/timberborn",
+              "url": "https://reddit.com/r/timberborn"
+            },
+            {
+              "label": "Discord server",
+              "description": "discord.gg/timberborn",
+              "url": "https://discord.gg/timberborn"
+            },
+            {
+              "label": "Mod.io",
+              "description": "mod.io",
+              "url": "https://mod.io/g/timberborn"
+            }
+          ]
+        },
+        "timberborn-modding-ext.locFiles": {
+          "type": "array",
+          "scope": "resource",
+          "description": "%configuration.loc-files.description%",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "description": "%configuration.loc-files.path.description%",
+                "minLength": 1,
+                "format": "path",
+                "examples": [
+                  "Data/Localizations/enUS_MyMod.csv",
+                  "Localizations/enUS_MyMod.csv"
+                ],
+                "default": "Data/Localizations/enUS_MyMod.csv"
+              },
+              "language": {
+                "type": "string",
+                "description": "%configuration.loc-files.language.description%",
+                "examples": [
+                  "de",
+                  "en",
+                  "es",
+                  "fr",
+                  "it",
+                  "ja",
+                  "ko",
+                  "pl",
+                  "pt",
+                  "ru",
+                  "th",
+                  "tr",
+                  "uk",
+                  "zh-cn",
+                  "zh-tw",
+                  "nl",
+                  "cs"
+                ],
+                "default": "en"
+              }
+            },
+            "required": [
+              "path",
+              "language"
+            ]
+          }
+        }
+      }
+    },
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./snippets/json.code-snippets"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/specifications.code-snippets"
+      },
+      {
+        "language": "plaintext",
+        "path": "./snippets/csv.code-snippets"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/csharp.code-snippets"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/tapi.code-snippets"
+      }
+    ],
+    "jsonValidation": [
+      {
+        "fileMatch": [
+          "**/manifest.json"
+        ],
+        "url": "./schema/manifest-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/mod.json"
+        ],
+        "url": "./schema/mod-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/workshop_data.json"
+        ],
+        "url": "./schema/workshop_data-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/BonusTypes/BonusTypeSpecification.*.json"
+        ],
+        "url": "./schema/BonusTypeSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Factions/FactionSpecification.*.json"
+        ],
+        "url": "./schema/FactionSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/GoodGroups/GoodGroupSpecification.*.json"
+        ],
+        "url": "./schema/GoodGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Goods/GoodSpecification.*.json"
+        ],
+        "url": "./schema/GoodSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/KeyBindingGroups/KeyBindingGroupSpecification.*.json"
+        ],
+        "url": "./schema/KeyBindingGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/KeyBindings/*/KeyBindingSpecification.*.json"
+        ],
+        "url": "./schema/KeyBindingSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/MaterialGroups/MaterialGroupSpecification.*.json"
+        ],
+        "url": "./schema/MaterialGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/ModelAttachment/*/ModelAttachmentSpecification.*.*.*.json"
+        ],
+        "url": "./schema/ModelAttachmentSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/NeedGroups/NeedGroupSpecification.*.json"
+        ],
+        "url": "./schema/NeedGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Needs/NeedSpecification.*.json"
+        ],
+        "url": "./schema/NeedSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/NeedsAffectedBySoakedness/NeedsAffectedBySoakednessSpecification.*.json"
+        ],
+        "url": "./schema/NeedsAffectedBySoakednessSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/NeedsAffectingWork/NeedsAffectingWorkSpecification.*.json"
+        ],
+        "url": "./schema/NeedsAffectingWorkSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/PrefabGroupSpecification/PrefabGroupSpecification.*.*.json"
+        ],
+        "url": "./schema/PrefabGroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/Recipes/RecipeSpecification.*.json"
+        ],
+        "url": "./schema/RecipeSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/RemoveYieldStrategies/RemoveYieldStrategySpecification.*.json"
+        ],
+        "url": "./schema/RemoveYieldStrategySpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/TailDecals/TailDecalSpecification.*.*.json"
+        ],
+        "url": "./schema/TailDecalSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/ToolGroups/ToolGroupSpecification.*.*.json"
+        ],
+        "url": "./schema/ToolgroupSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/WellbeingTiers/WellbeingTierSpecification.*.*.json"
+        ],
+        "url": "./schema/WellbeingTierSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/WorkerOutfits/WorkerOutfitSpecification.*.*.*.json"
+        ],
+        "url": "./schema/WorkerOutfitSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/WorkerTypes/WorkerTypeSpecification.*.*.json"
+        ],
+        "url": "./schema/WorkerTypeSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Specifications/YieldRemovalChanceBonuses/YieldRemovalChanceBonusSpecification.*.*.json"
+        ],
+        "url": "./schema/YieldRemovalChanceBonusSpecification-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/map_metadata.json"
+        ],
+        "url": "./schema/map_metadata-schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/save_metadata.json"
+        ],
+        "url": "./schema/save_metadata-schema.json"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "timberborn-modding-ext-getting-started",
+        "title": "%wakltroughs.getting-started.title%",
+        "description": "%wakltroughs.getting-started.description%",
+        "steps": [
+          {
+            "id": "project-setup",
+            "title": "%walktroughs.getting-started.project-setup.title%",
+            "description": "%walktroughs.getting-started.project-setup.description%",
+            "media": {
+              "svg": "./walktroughs/icons/folder-icon.svg",
+              "altText": "%walktroughs.getting-started.project-setup.alt-txt"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.projectSetup"
+            ]
+          },
+          {
+            "id": "json-validation",
+            "title": "%walktroughs.getting-started.json-validation.title%",
+            "description": "%walktroughs.getting-started.json-validation.description%",
+            "media": {
+              "svg": "./walktroughs/icons/verified-icon.svg",
+              "altText": "%walktroughs.getting-started.json-validation.alt-txt%"
+            },
+            "completionEvents": [
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "code-snippets",
+            "title": "%walktroughs.getting-started.code-snippets.title%",
+            "description": "%walktroughs.getting-started.code-snippets.description%",
+            "media": {
+              "svg": "./walktroughs/icons/snippet-icon.svg",
+              "altText": "%walktroughs.getting-started.code-snippets.alt-txt%"
+            },
+            "completionEvents": [
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "launch-game",
+            "title": "%walktroughs.getting-started.launch-game.title%",
+            "description": "%walktroughs.getting-started.launch-game.description%",
+            "media": {
+              "svg": "./walktroughs/icons/game-icon.svg",
+              "altText": "%walktroughs.getting-started.launch-game.alt-txt%"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.launchGame"
+            ]
+          },
+          {
+            "id": "translate-localizations",
+            "title": "%walktroughs.getting-started.translate-localizations.title%",
+            "description": "%walktroughs.getting-started.translate-localizations.description%",
+            "media": {
+              "svg": "./walktroughs/icons/translate-icon.svg",
+              "altText": "%walktroughs.getting-started.translate-localizations.alt-txt%"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.translateLocalizations"
+            ]
+          },
+          {
+            "id": "documentation-links",
+            "title": "%walktroughs.getting-started.documentation-links.title%",
+            "description": "%walktroughs.getting-started.documentation-links.description%",
+            "media": {
+              "svg": "./walktroughs/icons/open-icon.svg",
+              "altText": "%walktroughs.getting-started.documentation-links.alt-txt%"
+            },
+            "completionEvents": [
+              "onCommand:timberborn-modding-ext.openDocsLinks"
+            ]
+          },
+          {
+            "id": "timberborn-themes",
+            "title": "%walktroughs.getting-started.timberborn-themes.title%",
+            "disables": true,
+            "description": "%walktroughs.getting-started.timberborn-themes.description%",
+            "media": {
+              "svg": "./walktroughs/icons/color-icon.svg",
+              "altText": "%walktroughs.getting-started.timberborn-themes.alt-txt%"
+            },
+            "completionEvents": [
+              "onCommand:workbench.action.selectTheme",
+              "onCommand:workbench.action.selectIconTheme",
+              "onCommand:workbench.action.selectProductIconTheme"
+            ]
+          }
+        ]
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "timberborn-modding-ext.launchGame",
+        "key": "ctrl+alt+t ctrl+alt+l"
+      },
+      {
+        "command": "timberborn-modding-ext.openDocsLinks",
+        "key": "ctrl+alt+t ctrl+alt+d"
+      },
+      {
+        "command": "timberborn-modding-ext.translateLocalizations",
+        "key": "ctrl+alt+t ctrl+alt+c"
+      }
+    ],
+    "languages": [
+      {
+        "id": "yaml",
+        "extensions": [
+          ".prefab",
+          ".meta"
+        ]
+      }
+    ],
+    "configurationDefaults": {
+      "files.exclude": {
+        "**/*.meta": true
+      }
+    },
+    "customEditors": [
+      {
+        "viewType": "timberViewer.timberFile",
+        "displayName": "%customEditors.timber-viewer.displayName%",
+        "priority": "default",
+        "selector": [
+          {
+            "filenamePattern": "*.timber"
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.95.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0"
+  }
+}

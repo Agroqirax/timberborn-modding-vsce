@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Worker type specification",
+  "description": "Add or modify a worker type",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "minLength": 1,
+      "examples": ["Beaver", "Bot"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "BackwardCompatibleIds": {
+      "type": "array",
+      "description": "Previous IDs",
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "BackwardCompatibleIds#append": {
+      "type": "array",
+      "description": "Append previous IDs",
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "BackwardCompatibleIds#remove": {
+      "type": "array",
+      "description": "Remove previous IDs",
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "DisplayNameLocKey": {
+      "type": "string",
+      "description": "Worker type name loc key",
+      "minLength": 1,
+      "examples": ["Beaver.PluralDisplayName", "Bot.PluralDisplayName"],
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "WorkerOnlyTextLocKey": {
+      "type": "string",
+      "default": "Worker type only loc key",
+      "minLength": 1,
+      "examples": ["Work.BeaverOnly", "Work.BotOnly"],
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "IgnoresWorkingHours": {
+      "type": "boolean",
+      "description": "Ignore working hours",
+      "default": false
+    }
+  },
+  "required": [
+    "Id",
+    "BackwardCompatibleIds",
+    "DisplayNameLocKey",
+    "WorkerOnlyTextLocKey",
+    "IgnoresWorkingHours"
+  ]
+}

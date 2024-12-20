@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Needs affected by soakedness specification",
+  "description": "Add or modify a need affected by soakedness",
+  "type": "object",
+  "properties": {
+    "NeedId": {
+      "type": "string",
+      "description": "Need Id to be modified",
+      "minLength": 1,
+      "examples": ["WetFur"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "PointsPerHour": {
+      "type": "number",
+      "description": "Points added /hr",
+      "default": 0.5
+    }
+  },
+  "required": ["NeedId", "PointsPerHour"]
+}

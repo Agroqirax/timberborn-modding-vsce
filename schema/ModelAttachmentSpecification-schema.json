@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Model attachement specification",
+  "description": "Add or modify a model attachement",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "minLength": 1,
+      "examples": ["Bees.Beehive.Folktails"],
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "Prefab": {
+      "type": "string",
+      "minLength": 1,
+      "examples": ["Buildings/Food/Beehive/Bees/Bees"],
+      "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+    },
+    "Parent": {
+      "type": "string",
+      "minLength": 1,
+      "examples": [
+        "#Finished",
+        "#HeadMisc.001",
+        "#HeadMisc",
+        "#EmptySmoke1",
+        "#EmptySmoke2",
+        "#EmptySmoke3",
+        "#SparksMisc"
+      ],
+      "default": "#Finished",
+      "pattern": "^#[a-zA-Z0-9_-.]"
+    },
+    "Position": {
+      "type": "object",
+      "properties": {
+        "X": {
+          "type": "number"
+        },
+        "Y": {
+          "type": "number"
+        },
+        "Z": {
+          "type": "number"
+        }
+      },
+      "required": ["X", "Y", "Z"]
+    },
+    "Rotation": {
+      "type": "object",
+      "properties": {
+        "X": {
+          "type": "number"
+        },
+        "Y": {
+          "type": "number"
+        },
+        "Z": {
+          "type": "number"
+        }
+      },
+      "required": ["X", "Y", "Z"]
+    },
+    "Scale": {
+      "type": "object",
+      "properties": {
+        "X": {
+          "type": "number"
+        },
+        "Y": {
+          "type": "number"
+        },
+        "Z": {
+          "type": "number"
+        }
+      },
+      "required": ["X", "Y", "Z"]
+    }
+  },
+  "required": ["Id", "Prefab", "Parent"]
+}

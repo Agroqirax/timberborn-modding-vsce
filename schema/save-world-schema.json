@@ -1,0 +1,821 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Save world",
+  "description": "Save world",
+  "type": "object",
+  "properties": {
+    "GameVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "Singletons": {
+      "type": "object",
+      "properties": {
+        "MapSize": {
+          "type": "object",
+          "properties": {
+            "Size": {
+              "type": "object",
+              "properties": {
+                "X": {
+                  "type": "number"
+                },
+                "Y": {
+                  "type": "number"
+                }
+              },
+              "required": ["X", "Y"]
+            }
+          },
+          "required": ["Size"]
+        },
+        "CameraComponent": {
+          "type": "object",
+          "properties": {
+            "CameraState": {
+              "type": "object",
+              "properties": {
+                "Target": {
+                  "type": "object",
+                  "properties": {
+                    "X": {
+                      "type": "number"
+                    },
+                    "Y": {
+                      "type": "number"
+                    },
+                    "Z": {
+                      "type": "number"
+                    }
+                  },
+                  "required": ["X", "Y", "Z"]
+                },
+                "ZoomLevel": {
+                  "type": "number"
+                },
+                "HorizontalAngle": {
+                  "type": "number"
+                },
+                "VerticalAngle": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "Target",
+                "ZoomLevel",
+                "HorizontalAngle",
+                "VerticalAngle"
+              ]
+            }
+          },
+          "required": ["CameraState"]
+        },
+        "TerrainMap": {
+          "type": "object",
+          "properties": {
+            "Heights": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            }
+          },
+          "required": ["Heights"]
+        },
+        "DayNightCycle": {
+          "type": "object",
+          "properties": {
+            "DayNumber": {
+              "type": "number"
+            },
+            "DayProgress": {
+              "type": "number"
+            }
+          },
+          "required": ["DayNumber", "DayProgress"]
+        },
+        "TemperateWeatherDurationService": {
+          "type": "object",
+          "properties": {
+            "MinTemperateWeatherDuration": {
+              "type": "number"
+            },
+            "MaxTemperateWeatherDuration": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "MinTemperateWeatherDuration",
+            "MaxTemperateWeatherDuration"
+          ]
+        },
+        "DroughtWeather": {
+          "type": "object",
+          "properties": {
+            "MinDroughtDuration": {
+              "type": "number"
+            },
+            "MaxDroughtDuration": {
+              "type": "number"
+            },
+            "HandicapMultiplier": {
+              "type": "number"
+            },
+            "HandicapCycles": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "MinDroughtDuration",
+            "MaxDroughtDuration",
+            "HandicapMultiplier",
+            "HandicapCycles"
+          ]
+        },
+        "BadtideWeather": {
+          "type": "object",
+          "properties": {
+            "MinBadtideWeatherDuration": {
+              "type": "number"
+            },
+            "MaxBadtideWeatherDuration": {
+              "type": "number"
+            },
+            "HandicapMultiplier": {
+              "type": "number"
+            },
+            "HandicapCycles": {
+              "type": "number"
+            },
+            "CyclesBeforeRandomizing": {
+              "type": "number"
+            },
+            "ChanceBadtideWeather": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "MinBadtideWeatherDuration",
+            "MaxBadtideWeatherDuration",
+            "HandicapMultiplier",
+            "HandicapCycles",
+            "CyclesBeforeRandomizing",
+            "ChanceBadtideWeather"
+          ]
+        },
+        "HazardousWeatherHistory": {
+          "type": "object",
+          "properties": {
+            "HistoryData": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": {
+                "required": ["HazardousWeatherId", "Duration"],
+                "properties": {
+                  "HazardousWeatherId": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "Duration": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          "required": ["HistoryData"]
+        },
+        "HazardousWeatherService": {
+          "type": "object",
+          "properties": {
+            "HazardousWeatherDuration": {
+              "type": "number"
+            },
+            "IsDrought": {
+              "type": "boolean"
+            }
+          },
+          "required": ["HazardousWeatherDuration", "IsDrought"]
+        },
+        "WeatherService": {
+          "type": "object",
+          "properties": {
+            "Cycle": {
+              "type": "number"
+            },
+            "CycleDay": {
+              "type": "number"
+            },
+            "TemperateWeatherDuration": {
+              "type": "number"
+            }
+          },
+          "required": ["Cycle", "CycleDay", "TemperateWeatherDuration"]
+        },
+        "NotificationSaver": {
+          "type": "object",
+          "properties": {
+            "Notifications": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": {
+                "required": ["Description", "Subject", "Cycle", "CycleDay"],
+                "properties": {
+                  "Description": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "Subject": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "Cycle": {
+                    "type": "number"
+                  },
+                  "CycleDay": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          "required": ["Notifications"]
+        },
+        "FactionService": {
+          "type": "object",
+          "properties": {
+            "Id": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": ["Id"]
+        },
+        "WaterMap": {
+          "type": "object",
+          "properties": {
+            "WaterDepths": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            },
+            "Outflows": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            }
+          },
+          "required": ["WaterDepths", "Outflows"]
+        },
+        "WaterEvaporationMap": {
+          "type": "object",
+          "properties": {
+            "EvaporationModifiers": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            }
+          },
+          "required": ["EvaporationModifiers"]
+        },
+        "ContaminationMap": {
+          "type": "object",
+          "properties": {
+            "Contaminations": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            }
+          },
+          "required": ["Contaminations"]
+        },
+        "SoilMoistureSimulator": {
+          "type": "object",
+          "properties": {
+            "MoistureLevels": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            }
+          },
+          "required": ["MoistureLevels"]
+        },
+        "SoilContaminationSimulator": {
+          "type": "object",
+          "properties": {
+            "ContaminationCandidates": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            },
+            "ContaminationLevels": {
+              "type": "object",
+              "properties": {
+                "Array": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": ["Array"]
+            }
+          },
+          "required": ["ContaminationCandidates", "ContaminationLevels"]
+        },
+        "BeaverNameService": {
+          "type": "object",
+          "properties": {
+            "Names": {
+              "type": "array",
+              "items": {
+                "properties": {}
+              }
+            }
+          },
+          "required": ["Names"]
+        },
+        "NeedModificationService": {
+          "type": "object",
+          "properties": {
+            "FoodConsumption": {
+              "type": "number"
+            },
+            "WaterConsumption": {
+              "type": "number"
+            }
+          },
+          "required": ["FoodConsumption", "WaterConsumption"]
+        },
+        "PlantingService": {
+          "type": "object",
+          "properties": {
+            "PlantingMap": {
+              "type": "object",
+              "properties": {
+                "Size": {
+                  "type": "object",
+                  "properties": {
+                    "X": {
+                      "type": "number"
+                    },
+                    "Y": {
+                      "type": "number"
+                    }
+                  },
+                  "required": ["X", "Y"]
+                },
+                "Cassava": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "Mangrove": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "Kohlrabi": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "CoffeeBush": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "Pine": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "Oak": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "Birch": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "minItems": 1,
+                  "items": {
+                    "required": ["X", "Y"],
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              },
+              "required": [
+                "Size",
+                "Cassava",
+                "Mangrove",
+                "Kohlrabi",
+                "CoffeeBush",
+                "Pine",
+                "Oak",
+                "Birch"
+              ]
+            }
+          },
+          "required": ["PlantingMap"]
+        },
+        "ScienceService": {
+          "type": "object",
+          "properties": {
+            "SciencePoints": {
+              "type": "number"
+            }
+          },
+          "required": ["SciencePoints"]
+        },
+        "BuildingUnlockingService": {
+          "type": "object",
+          "properties": {
+            "UnlockedBuildings": {
+              "type": "array",
+              "items": {
+                "properties": {}
+              }
+            }
+          },
+          "required": ["UnlockedBuildings"]
+        },
+        "TreeCuttingArea": {
+          "type": "object",
+          "properties": {
+            "CuttingArea": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": {
+                "required": ["X", "Y", "Z"],
+                "properties": {
+                  "X": {
+                    "type": "number"
+                  },
+                  "Y": {
+                    "type": "number"
+                  },
+                  "Z": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          "required": ["CuttingArea"]
+        },
+        "ManualMigrationDistrictSetter": {
+          "type": "object",
+          "properties": {
+            "LeftDistrictLastIndex": {
+              "type": "number"
+            },
+            "RightDistrictLastIndex": {
+              "type": "number"
+            }
+          },
+          "required": ["LeftDistrictLastIndex", "RightDistrictLastIndex"]
+        },
+        "BotPopulation": {
+          "type": "object",
+          "properties": {
+            "BotCreated": {
+              "type": "boolean"
+            }
+          },
+          "required": ["BotCreated"]
+        },
+        "WorkplaceUnlockingService": {
+          "type": "object",
+          "properties": {
+            "UnlockedWorkerTypes": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": {
+                "required": ["WorkplacePrefabName", "WorkerType"],
+                "properties": {
+                  "WorkplacePrefabName": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "WorkerType": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          },
+          "required": ["UnlockedWorkerTypes"]
+        },
+        "BotNameService": {
+          "type": "object",
+          "properties": {
+            "LastName": {
+              "type": "number"
+            }
+          },
+          "required": ["LastName"]
+        },
+        "WindService": {
+          "type": "object",
+          "properties": {
+            "WindStrength": {
+              "type": "number"
+            },
+            "WindDirection": {
+              "type": "object",
+              "properties": {
+                "X": {
+                  "type": "number"
+                },
+                "Y": {
+                  "type": "number"
+                }
+              },
+              "required": ["X", "Y"]
+            },
+            "NextWindChangeTime": {
+              "type": "number"
+            }
+          },
+          "required": ["WindStrength", "WindDirection", "NextWindChangeTime"]
+        },
+        "DistrictNameService": {
+          "type": "object",
+          "properties": {
+            "DistrictCounter": {
+              "type": "number"
+            }
+          },
+          "required": ["DistrictCounter"]
+        },
+        "DateSaltService": {
+          "type": "object",
+          "properties": {
+            "DateSaltedId": {
+              "type": "number"
+            },
+            "TimeSaltedId": {
+              "type": "number"
+            }
+          },
+          "required": ["DateSaltedId", "TimeSaltedId"]
+        },
+        "EffectProbabilityService": {
+          "type": "object",
+          "properties": {
+            "InjuryChanceModifier": {
+              "type": "number"
+            }
+          },
+          "required": ["InjuryChanceModifier"]
+        },
+        "GoodRecoveryRateService": {
+          "type": "object",
+          "properties": {
+            "DemolishableRecoveryRate": {
+              "type": "number"
+            }
+          },
+          "required": ["DemolishableRecoveryRate"]
+        },
+        "WorkingHoursManager": {
+          "type": "object",
+          "properties": {
+            "WorkedPartOfDay": {
+              "type": "number"
+            }
+          },
+          "required": ["WorkedPartOfDay"]
+        },
+        "TutorialService": {
+          "type": "object",
+          "properties": {
+            "FinishedTutorial": {
+              "type": "boolean"
+            }
+          },
+          "required": ["FinishedTutorial"]
+        },
+        "WellbeingHighscore": {
+          "type": "object",
+          "properties": {
+            "AverageWellbeingHighscore": {
+              "type": "number"
+            }
+          },
+          "required": ["AverageWellbeingHighscore"]
+        }
+      },
+      "required": [
+        "MapSize",
+        "CameraComponent",
+        "TerrainMap",
+        "DayNightCycle",
+        "TemperateWeatherDurationService",
+        "DroughtWeather",
+        "BadtideWeather",
+        "HazardousWeatherHistory",
+        "HazardousWeatherService",
+        "WeatherService",
+        "NotificationSaver",
+        "FactionService",
+        "WaterMap",
+        "WaterEvaporationMap",
+        "ContaminationMap",
+        "SoilMoistureSimulator",
+        "SoilContaminationSimulator",
+        "BeaverNameService",
+        "NeedModificationService",
+        "PlantingService",
+        "ScienceService",
+        "BuildingUnlockingService",
+        "TreeCuttingArea",
+        "ManualMigrationDistrictSetter",
+        "BotPopulation",
+        "WorkplaceUnlockingService",
+        "BotNameService",
+        "WindService",
+        "DistrictNameService",
+        "DateSaltService",
+        "EffectProbabilityService",
+        "GoodRecoveryRateService",
+        "WorkingHoursManager",
+        "TutorialService",
+        "WellbeingHighscore"
+      ]
+    },
+    "Entities": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "required": ["Id", "Template"],
+        "properties": {
+          "Id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "Template": {
+            "type": "string",
+            "minLength": 1
+          },
+          "Components": {
+            "type": "object",
+            "properties": {
+              "WaterSource": {
+                "type": "object",
+                "properties": {
+                  "SpecifiedStrength": {
+                    "type": "number"
+                  },
+                  "CurrentStrength": {
+                    "type": "number"
+                  }
+                },
+                "required": ["SpecifiedStrength", "CurrentStrength"]
+              },
+              "BlockObject": {
+                "type": "object",
+                "properties": {
+                  "Coordinates": {
+                    "type": "object",
+                    "properties": {
+                      "X": {
+                        "type": "number"
+                      },
+                      "Y": {
+                        "type": "number"
+                      },
+                      "Z": {
+                        "type": "number"
+                      }
+                    },
+                    "required": ["X", "Y", "Z"]
+                  }
+                },
+                "required": ["Coordinates"]
+              }
+            },
+            "required": ["WaterSource", "BlockObject"]
+          }
+        }
+      }
+    }
+  },
+  "required": ["GameVersion", "Timestamp", "Singletons", "Entities"]
+}

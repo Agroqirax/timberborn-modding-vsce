@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Tail decal specification",
+  "description": "Add or modify a tail decal",
+  "type": "object",
+  "properties": {
+    "FactionId": {
+      "type": "string",
+      "description": "Faction ID for tail specification",
+      "minLength": 1,
+      "examples": ["Folktails", "IronTeeth"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "Texture": {
+      "type": "string",
+      "description": "Tail texture",
+      "minLength": 1,
+      "examples": [
+        "Materials/Beavers/Folktails/Tails/Tail1.Folktails",
+        "Materials/Beavers/IronTeeth/Tails/Tail1.IronTeeth"
+      ],
+      "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+    }
+  },
+  "required": ["FactionId", "Texture"]
+}

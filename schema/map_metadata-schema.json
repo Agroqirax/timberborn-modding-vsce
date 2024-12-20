@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Map metadata",
+  "description": "Metadata for maps",
+  "type": "object",
+  "properties": {
+    "Width": {
+      "type": "number",
+      "description": "Map width",
+      "examples": [50, 100, 128, 192, 256],
+      "default": 256
+    },
+    "Height": {
+      "type": "number",
+      "description": "Map height",
+      "examples": [50, 100, 128, 192, 256],
+      "default": 256
+    },
+    "MapNameLocKey": {
+      "type": "string",
+      "description": "Map name loc key",
+      "default": ""
+    },
+    "MapDescriptionLocKey": {
+      "type": "string",
+      "description": "Map description loc key",
+      "default": ""
+    },
+    "MapDescription": {
+      "type": "string",
+      "description": "Map description"
+    },
+    "IsRecommended": {
+      "type": "boolean",
+      "description": "Is recommended map",
+      "default": false
+    },
+    "IsDev": {
+      "type": "boolean",
+      "description": "Is developer map",
+      "default": false
+    }
+  },
+  "required": [
+    "Width",
+    "Height",
+    "MapNameLocKey",
+    "MapDescriptionLocKey",
+    "MapDescription",
+    "IsRecommended",
+    "IsDev"
+  ]
+}

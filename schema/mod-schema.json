@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Mod manifest",
+  "description": "Mod manifest for BepInEx",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "description": "Mod name",
+      "type": "string",
+      "default": "My mod"
+    },
+    "Version": {
+      "description": "Mod version",
+      "type": "string",
+      "default": "0.0.1"
+    },
+    "UniqueId": {
+      "description": "Mod ID",
+      "type": "string"
+    },
+    "MinimumApiVersion": {
+      "description": "Minimum TimberAPI version",
+      "type": "string",
+      "default": "0.5.0"
+    },
+    "MinimumGameVersion": {
+      "description": "Minimum game version",
+      "type": "string",
+      "default": "0.2.8"
+    },
+    "EntryDll": {
+      "description": "EntryDLL file name",
+      "type": "string",
+      "default": "myname.Mods.ExampleMod.dll",
+      "format": "path"
+    },
+    "Assets": {
+      "type": "array",
+      "description": "Mod assets",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "Prefix": {
+              "type": "string",
+              "default": "ExampleMod"
+            },
+            "Scenes": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string",
+                  "description": "Scenes assets apply tos",
+                  "enum": ["MainMenu", "InGame", "MapEditor", "All"]
+                }
+              ]
+            }
+          },
+          "required": ["Prefix", "Scenes"]
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Version",
+    "UniqueId",
+    "MinimumApiVersion",
+    "MinimumGameVersion"
+  ]
+}

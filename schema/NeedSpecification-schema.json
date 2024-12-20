@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Need specification",
+  "description": "Add or modify a need",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "Need ID to be modified",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "BackwardCompatibleIds": {
+      "type": "array",
+      "description": "Previous IDs for this need",
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "BackwardCompatibleIds#append": {
+      "type": "array",
+      "description": "Append previous IDs for this need",
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "BackwardCompatibleIds#remove": {
+      "type": "array",
+      "description": "Remove previous IDs for this need",
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "Order": {
+      "type": "number",
+      "description": "Place in the wellbeing tab"
+    },
+    "NeedGroupId": {
+      "type": "string",
+      "description": "Need group ID",
+      "minLength": 1,
+      "examples": [
+        "Aesthetics",
+        "Awe",
+        "BasicNeeds",
+        "Boosts",
+        "Fun",
+        "Knowledge",
+        "Nutrition",
+        "Other",
+        "SocialLife"
+      ],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "CharacterType": {
+      "type": "string",
+      "description": "Character type affected",
+      "minLength": 1,
+      "enum": ["Beaver", "Bot"]
+    },
+    "DisplayNameLocKey": {
+      "type": "string",
+      "description": "Need name loc key",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "StartingValue": {
+      "type": "number",
+      "description": "Starting value",
+      "default": 0.0
+    },
+    "MinimumValue": {
+      "type": "number",
+      "description": "Minimum value",
+      "default": 0.0
+    },
+    "MaximumValue": {
+      "type": "number",
+      "description": "Maximum value",
+      "default": 1.0
+    },
+    "DailyDelta": {
+      "type": "number",
+      "description": "Daily subtraction",
+      "default": -0.1
+    },
+    "ImportanceMultiplier": {
+      "type": "number",
+      "default": 1.0
+    },
+    "CriticalNeedType": {
+      "type": "object",
+      "description": "Is critical need",
+      "properties": {
+        "Value": {
+          "type": "string",
+          "minLength": 1,
+          "enum": ["None", "State"]
+        }
+      },
+      "required": ["Value"]
+    },
+    "CriticalSpriteName": {
+      "type": "string",
+      "description": "Warning icon",
+      "examples": ["Hunger", "Thirst"],
+      "pattern": "^(|[a-zA-Z0-9_-]+)$"
+    },
+    "CriticalDescriptionLocKey": {
+      "type": "string",
+      "description": "Need warning loc key",
+      "examples": ["Status.Need.Thirst"],
+      "pattern": "^(|[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*)$"
+    },
+    "DeathOnMinValue": {
+      "type": "boolean",
+      "description": "Die when minimum value is reached",
+      "default": false
+    },
+    "DeathMessageLocKey": {
+      "type": "string",
+      "description": "Death message loc key",
+      "pattern": "^(|[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*)$"
+    },
+    "Effectiveness": {
+      "type": "number",
+      "description": "Effectiveness",
+      "default": 1.0
+    },
+    "Wastable": {
+      "type": "boolean",
+      "description": "Is wastable",
+      "default": false
+    },
+    "FavorableWellbeing": {
+      "type": "number",
+      "description": "Wellbeing bonus",
+      "default": 1.0
+    },
+    "UnfavorableWellbeing": {
+      "type": "number",
+      "description": "Wellbeing penalty",
+      "default": -10
+    }
+  },
+  "required": ["Id"]
+}

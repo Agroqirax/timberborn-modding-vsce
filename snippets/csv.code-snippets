@@ -1,0 +1,75 @@
+{
+  "LocalizationTemplate": {
+    "prefix": "localization-template",
+    "body": ["ID,Text,Comment", "$1,$2,$3"],
+    "description": "Template for localization files",
+    "isFileTemplate": true,
+    "scope": "csv,txt"
+  },
+  "BuildingName": {
+    "prefix": "building-name",
+    "body": ["Buildings.$1.DisplayName,$2,$3"],
+    "description": "Building display name",
+    "scope": "csv,txt"
+  },
+  "BuildingDescription": {
+    "prefix": "building-description",
+    "body": ["Buildings.$1.Description,$2,$3"],
+    "description": "Building description",
+    "scope": "csv,txt"
+  },
+  "BuildingFlavorDescription": {
+    "prefix": "building-flavordescription",
+    "body": ["Buildings.$1.FlavorDescription,$2,$3"],
+    "description": "Building display flavor description",
+    "scope": "csv,txt"
+  },
+  "FactionName": {
+    "prefix": "faction-name",
+    "body": ["Faction.$1.DisplayName,$2,$3"],
+    "description": "Faction display name",
+    "scope": "csv,txt"
+  },
+  "FactionDescription": {
+    "prefix": "faction-description",
+    "body": ["Faction.$1.Description,$2,$3"],
+    "description": "Faction description",
+    "scope": "csv,txt"
+  },
+  "GoodName": {
+    "prefix": "good-name",
+    "body": ["Good.$1.DisplayName,$2,$3"],
+    "description": "Good display name",
+    "scope": "csv,txt"
+  },
+  "GoodPluralName": {
+    "prefix": "good-plural-name",
+    "body": ["Good.$1.PluralDisplayName,$2,$3"],
+    "description": "Good plural display name",
+    "scope": "csv,txt"
+  },
+  "Keybinding": {
+    "prefix": "keybinding",
+    "body": ["KeyBinding.$1,$2,$3"],
+    "description": "Keybinding",
+    "scope": "csv,txt"
+  },
+  "NaturalResourcesName": {
+    "prefix": "natural-resource-name",
+    "body": ["NaturalResources.$1.DisplayName,$2,$3"],
+    "description": "Natural resource name",
+    "scope": "csv,txt"
+  },
+  "NaturalResourcesFlavorDescription": {
+    "prefix": "natural-resource-flavordescription",
+    "body": ["NaturalResources.$1.FlavorDescription,$2,$3"],
+    "description": "Natural resource flavordescription",
+    "scope": "csv,txt"
+  },
+  "NeedName": {
+    "prefix": "need-name",
+    "body": ["Need.$1.DisplayName,$2,$3"],
+    "description": "Need name",
+    "scope": "csv,txt"
+  }
+}

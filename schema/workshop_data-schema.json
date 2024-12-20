@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Workshop data",
+  "description": "Workshop data for steam workshop",
+  "type": "object",
+  "properties": {
+    "ItemId": {
+      "type": "string",
+      "description": "Steam workshop ID",
+      "minLength": 10,
+      "maxLength": 10,
+      "examples": ["3275060459"],
+      "pattern": "^[0-9]+$"
+    },
+    "Name": {
+      "type": "string",
+      "description": "Steam workshop name",
+      "minLength": 1,
+      "examples": ["Shanty Speaker"]
+    },
+    "Visibility": {
+      "type": "string",
+      "description": "Steam workshop privacy level",
+      "minLength": 6,
+      "maxLength": 12,
+      "enum": ["Public", "Friends-only", "Private", "Unlisted"]
+    },
+    "UpdateDescription": {
+      "type": "boolean",
+      "description": "Update description when updating mod",
+      "default": true
+    },
+    "UpdateVisibility": {
+      "type": "boolean",
+      "description": "Update visibility when updating mod",
+      "default": true
+    },
+    "UpdatePreview": {
+      "type": "boolean",
+      "description": "Update thumbnail when updating mod",
+      "default": true
+    }
+  },
+  "required": [
+    "ItemId",
+    "Name",
+    "Visibility",
+    "UpdateDescription",
+    "UpdateVisibility",
+    "UpdatePreview"
+  ]
+}

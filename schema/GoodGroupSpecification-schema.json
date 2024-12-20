@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Goodgroup specification",
+  "description": "Add or modify a goodgroup",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "Good group ID to be modified",
+      "minLength": 1,
+      "examples": ["Food", "Ingredients", "Log", "Materials", "Water"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "Order": {
+      "type": "number",
+      "description": "Place in the UI",
+      "default": 0
+    },
+    "DisplayNameLocKey": {
+      "type": "string",
+      "description": "Group name loc key",
+      "minLength": 1,
+      "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+    },
+    "Icon": {
+      "type": "string",
+      "description": "Group icon image path",
+      "minLength": 1
+    },
+    "SingleResourceGroup": {
+      "description": "Show dropdown",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "Id",
+    "Order",
+    "DisplayNameLocKey",
+    "Icon",
+    "SingleResourceGroup"
+  ]
+}

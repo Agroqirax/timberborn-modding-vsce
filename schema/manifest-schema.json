@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Mod manifest",
+  "description": "Define a timberborn mod",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "Mod name",
+      "minLength": 1,
+      "default": "My First Mod"
+    },
+    "Version": {
+      "type": "string",
+      "description": "Mod version",
+      "minLength": 1,
+      "default": "0.1",
+      "pattern": "^[0-9]+(\\.[0-9]+)*$"
+    },
+    "Id": {
+      "type": "string",
+      "description": "Mod ID\nUSERNAME.MODNAME is often used (e.g. Tobbert.ChooChoo)",
+      "minLength": 1,
+      "examples": [
+        "Timberborn.ModExamples.ShantySpeaker",
+        "Timberborn.ModExamples.Overwrites",
+        "Timberborn.ModExamples.HelloWorld"
+      ],
+      "default": "MyFirstMod",
+      "pattern": "^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$"
+    },
+    "MinimumGameVersion": {
+      "type": "string",
+      "description": "Minimum compatible game version",
+      "minLength": 1,
+      "default": "0.0.0.0",
+      "pattern": "^[0-9]+(\\.[0-9]+)*$"
+    },
+    "Description": {
+      "type": "string",
+      "description": "Mod description",
+      "minLength": 1,
+      "default": "The very first mod."
+    },
+    "RequiredMods": {
+      "type": "array",
+      "description": "Required mods",
+      "uniqueItems": true,
+      "minItems": 0,
+      "items": {
+        "required": ["Id"],
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Mod ID",
+            "minLength": 1,
+            "default": "AnotherMod",
+            "pattern": "^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$"
+          },
+          "MinimumVersion": {
+            "type": "string",
+            "description": "Mod minimum compatible version",
+            "minLength": 1,
+            "default": "0.1",
+            "pattern": "^[0-9]+(\\.[0-9]+)*$"
+          }
+        }
+      }
+    },
+    "OptionalMods": {
+      "type": "array",
+      "description": "Optional mods, get loaded first if installed",
+      "uniqueItems": true,
+      "minItems": 0,
+      "items": {
+        "required": ["Id"],
+        "properties": {
+          "Id": {
+            "type": "string",
+            "description": "Mod ID",
+            "minLength": 1,
+            "default": "AnotherMod",
+            "pattern": "^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)*$"
+          },
+          "MinimumVersion": {
+            "type": "string",
+            "description": "Mod minimum compatible version",
+            "minLength": 1,
+            "default": "0.1",
+            "pattern": "^[0-9]+(\\.[0-9]+)*$"
+          }
+        }
+      }
+    }
+  },
+  "required": ["Name", "Version", "Id", "MinimumGameVersion", "Description"]
+}

@@ -1,0 +1,14 @@
+{
+  "Append Snippet": {
+    "prefix": "append",
+    "body": ["\"$1#append\":", "[\"$2\"],"],
+    "description": "Append items to an array",
+    "scope": "json,jsonl,jsonc"
+  },
+  "Remove Snippet": {
+    "prefix": "remove",
+    "body": ["\"$1#remove\":", "[\"$2\"],"],
+    "description": "Append items to an array",
+    "scope": "json,jsonl,jsonc"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Remove yield strategy specification",
+  "description": "Add or modify a remove yield strategy",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string",
+      "description": "Remove yield specification ID to be modified",
+      "minLength": 1,
+      "examples": ["Cuttable", "Ruins", "Uncuttable"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    },
+    "CompatibleResourceGroups": {
+      "type": "array",
+      "description": "Resource groups for this specification",
+      "examples": [
+        "Cuttable",
+        "Ruin",
+        "Farmhouse",
+        "AquaticFarmhouse",
+        "Gatherable",
+        "Tappable"
+      ],
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "CompatibleResourceGroups#append": {
+      "type": "array",
+      "description": "Append resource groups for this specification",
+      "examples": [
+        "Cuttable",
+        "Ruin",
+        "Farmhouse",
+        "AquaticFarmhouse",
+        "Gatherable",
+        "Tappable"
+      ],
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "CompatibleResourceGroups#remove": {
+      "type": "array",
+      "description": "Remove resource groups for this specification",
+      "examples": [
+        "Cuttable",
+        "Ruin",
+        "Farmhouse",
+        "AquaticFarmhouse",
+        "Gatherable",
+        "Tappable"
+      ],
+      "items": {
+        "pattern": "^[a-zA-Z0-9_-]+$"
+      }
+    },
+    "Animation": {
+      "type": "string",
+      "description": "Harvesting animation",
+      "minLength": 1,
+      "examples": ["Cutting", "Working"],
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    }
+  },
+  "required": ["Id", "CompatibleResourceGroups", "Animation"]
+}
