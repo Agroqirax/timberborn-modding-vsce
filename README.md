@@ -1,6 +1,6 @@
-# Timberborn modding tools extension
-
 Looking for [`mechanistry/timberborn-modding`](https://github.com/mechanistry/timberborn-modding)?
+
+# Timberborn modding tools extension
 
 This is an unofficial extension for modding timberborn.
 It provides json validation, snippets, an automatic localizations translator and some other cool tools

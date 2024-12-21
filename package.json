@@ -2,7 +2,7 @@
   "name": "timberborn-modding-ext",
   "displayName": "%extension.displayName%",
   "description": "%extension.description%",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "SEE LICENSE IN LICENSE.md",
   "keywords": [
     "timberborn",
@@ -39,15 +39,12 @@
   },
   "categories": [
     "Snippets",
-    "Visualization",
     "Other"
   ],
   "activationEvents": [
     "onLanguage:json",
     "onLanguage:jsonl",
-    "onLanguage:jsonc",
-    "onFileSystem:*.timber",
-    "onView:timberViewer.editor"
+    "onLanguage:jsonc"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -547,19 +544,7 @@
       "files.exclude": {
         "**/*.meta": true
       }
-    },
-    "customEditors": [
-      {
-        "viewType": "timberViewer.timberFile",
-        "displayName": "%customEditors.timber-viewer.displayName%",
-        "priority": "default",
-        "selector": [
-          {
-            "filenamePattern": "*.timber"
-          }
-        ]
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

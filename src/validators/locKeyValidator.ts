@@ -49,7 +49,12 @@ export async function validateLocKeys(
   const diagnosticsArray: vscode.Diagnostic[] = [];
 
   Object.entries(json).forEach(([key, value]) => {
-    if (!key.endsWith("LocKey") || typeof value !== "string") return;
+    if (
+      !key.endsWith("LocKey") ||
+      typeof value !== "string" ||
+      value.length == 0
+    )
+      return;
 
     const locKey = value;
     const missingLanguages: string[] = [];
