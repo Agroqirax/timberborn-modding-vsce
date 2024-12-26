@@ -2,7 +2,7 @@
   "name": "timberborn-modding-ext",
   "displayName": "%extension.displayName%",
   "description": "%extension.description%",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE.md",
   "keywords": [
     "timberborn",
@@ -544,7 +544,14 @@
       "files.exclude": {
         "**/*.meta": true
       }
-    }
+    },
+    "iconThemes": [
+      {
+        "id": "timberborn-file-icons-default",
+        "label": "Timberborn file icons",
+        "path": "./themes/Timberborn-default.icon-theme.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

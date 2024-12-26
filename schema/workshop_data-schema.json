@@ -21,8 +21,6 @@
     "Visibility": {
       "type": "string",
       "description": "Steam workshop visibility level",
-      "minLength": 6,
-      "maxLength": 12,
       "enum": ["Public", "Friends-only", "Private", "Unlisted"]
     },
     "UpdateDescription": {

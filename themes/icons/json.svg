@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="json.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title1">Icon</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="7.6296899"
+     inkscape:cx="15.990165"
+     inkscape:cy="37.026407"
+     inkscape:window-width="1280"
+     inkscape:window-height="1001"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999994"
+       spacingy="0.99999994"
+       empcolor="#3f3fff"
+       empopacity="0.25098039"
+       color="#3f3fff"
+       opacity="0.1254902"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 9.3999969,13.599994 v -1.399999 h 2.0999971 q 0.2975,0 0.498751,-0.201251 0.201256,-0.20125 0.201256,-0.498749 v -1.399999 q 0,-0.6649994 0.385001,-1.2074994 0.385,-0.5425 1.015,-0.77 V 7.8774969 Q 12.969994,7.6499971 12.584994,7.1074974 12.199993,6.5649976 12.199993,5.8999981 V 4.4999988 q 0,-0.2974999 -0.201256,-0.4987496 Q 11.797481,3.7999984 11.499986,3.7999984 H 9.3999969 V 2.4 h 2.0999971 q 0.875,0 1.487498,0.6124997 0.612502,0.6124996 0.612502,1.4874991 v 1.3999993 q 0,0.2974999 0.201256,0.4987496 0.201256,0.2012508 0.498751,0.2012508 H 15 v 2.7999981 h -0.699999 q -0.2975,0 -0.498751,0.201251 -0.201256,0.201251 -0.201256,0.4987504 v 1.399997 q 0,0.875 -0.612502,1.4875 -0.612498,0.612499 -1.487498,0.612499 z m -4.899999,0 q -0.874999,0 -1.487499,-0.612499 -0.6124997,-0.6125 -0.6124997,-1.4875 v -1.399999 q 0,-0.2975004 -0.2012507,-0.4987494 Q 1.9974977,9.3999956 1.6999988,9.3999956 H 1 V 6.5999977 h 0.6999996 q 0.2975,0 0.4987497,-0.2012508 Q 2.4,6.1974962 2.4,5.8999973 V 4.4999988 Q 2.4,3.6249993 3.0124997,3.0124997 3.6249989,2.4 4.4999979,2.4 h 2.099999 v 1.3999992 h -2.099999 q -0.2975,0 -0.498749,0.2012508 -0.201251,0.2012508 -0.201251,0.4987496 v 1.3999993 q 0,0.6649995 -0.3850001,1.2074993 -0.3849997,0.5424997 -1.0149994,0.7699995 v 0.2449999 q 0.6299997,0.227501 1.0149994,0.769999 0.3850001,0.5425 0.3850001,1.2074994 v 1.399999 q 0,0.2975 0.201251,0.49875 0.20125,0.201251 0.498749,0.201251 h 2.099999 v 1.399999 z"
+       id="path1"
+       style="fill:#bca26c;fill-opacity:1;stroke-width:0.0175" />
+  </g>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Google LLC</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Google LLC</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Google LLC</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Icon</dc:title>
+        <dc:date>2024-12-23</dc:date>
+        <dc:language>en-US</dc:language>
+        <dc:description>Icon</dc:description>
+        <dc:contributor>
+          <cc:Agent>
+            <dc:title>Agroqirax</dc:title>
+          </cc:Agent>
+        </dc:contributor>
+        <cc:license
+           rdf:resource="https://github.com/Agroqirax/timberborn-modding-vsce/blob/main/LICENSE.md" />
+        <dc:source>https://github.com/google/material-design-icons/blob/master/LICENSE</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Icon</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

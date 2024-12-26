@@ -29,12 +29,12 @@ Most features work out-of-the-box but a few must be configured
 - 📖 Quick links to documentation with custom links
 - 📁 Project setup command
 - 🌍 Localization keys validator & hover provider
+- 🎨 File icon theme
 
 ## Ideas
 
 - 📢 Mod publisher (upload to mod.io, thunderstore, github releases)
 - 🪵 Error log viewer
-- 🎨 Timberborn theme
 
 ## Problems
 
@@ -58,6 +58,8 @@ It is not a replacement for the official tools and/or documentation provided by 
 
 MIT license, see [LICENSE.md](LICENSE.md).
 
-This software contains parts of `mechanistry/timberborn-modding` [LICENSE](https://github.com/mechanistry/timberborn-modding/blob/main/LICENSE)
+This software includes parts of [`mechanistry/timberborn-modding`](https://github.com/mechanistry/timberborn-modding)
 
-For more info contact me on discord `@Agroqirax` in the timberborn [discord server](https://discord.gg/timberborn)
+This software includes parts of [`google/material-design-icons`](https://github.com/google/material-design-icons)
+
+For more info contact me on discord `@Agroqirax` in the timberborn [discord server](https://discord.gg/timberborn).

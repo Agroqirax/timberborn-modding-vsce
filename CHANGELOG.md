@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.0.3] - 2024-12-23
+
+### Changed
+
+- 🐛 Bug fixes
+
+### Added
+
+- 🎨 File icon theme
+
 ## [v0.0.2] - 2024-12-21
 
 ### Changed

@@ -1,0 +1,67 @@
+{
+  "hidesExplorerArrows": false,
+  "file": "file",
+  "folder": "folder",
+  "folderExpanded": "folder-open",
+  "iconDefinitions": {
+    "3d": { "iconPath": "./icons/3d.svg" },
+    "code": { "iconPath": "./icons/code.svg" },
+    "config": { "iconPath": "./icons/config.svg" },
+    "file": { "iconPath": "./icons/file.svg" },
+    "folder": { "iconPath": "./icons/folder.svg" },
+    "folder-config": { "iconPath": "./icons/folder-config.svg" },
+    "folder-open": { "iconPath": "./icons/folder-open.svg" },
+    "history": { "iconPath": "./icons/history.svg" },
+    "home": { "iconPath": "./icons/home.svg" },
+    "image": { "iconPath": "./icons/image.svg" },
+    "info": { "iconPath": "./icons/info.svg" },
+    "json": { "iconPath": "./icons/json.svg" },
+    "license": { "iconPath": "./icons/license.svg" },
+    "translate": { "iconPath": "./icons/translate.svg" },
+    "zip": { "iconPath": "./icons/zip.svg" }
+  },
+  "languageIds": {
+    "json": "json",
+    "jsonc": "json",
+    "json5": "json",
+    "jsonl": "json",
+    "csharp": "code"
+  },
+  "fileExtensions": {
+    "cs": "code",
+    "blend": "3d",
+    "fbx": "3d",
+    "mesh": "3d",
+    "obj": "3d",
+    "model": "3d",
+    "timbermesh": "3d",
+    "png": "image",
+    "jpeg": "image",
+    "jpg": "image",
+    "webp": "image",
+    "xcf": "image",
+    "zip": "zip",
+    "prefab": "home",
+    "localizations/csv": "translate",
+    "localizations/txt": "translate"
+  },
+  "fileNames": {
+    "changelog": "history",
+    "changelog.md": "history",
+    "changelog.txt": "history",
+    "readme.md": "info",
+    "readme.txt": "info",
+    "readme": "info",
+    "license": "license",
+    "license.md": "license",
+    "license.txt": "license",
+    "licence": "license",
+    "licence.md": "license",
+    "licence.txt": "license",
+    "manifest.json": "config"
+  },
+  "folderNames": {
+    "specifications": "folder-config"
+  },
+  "folderNamesExpanded": {}
+}

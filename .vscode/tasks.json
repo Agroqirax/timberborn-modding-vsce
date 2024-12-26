@@ -22,7 +22,8 @@
       "label": "Package extension",
       "icon": {
         "id": "file-binary"
-      }
+      },
+      "group": "build"
     }
   ]
 }
