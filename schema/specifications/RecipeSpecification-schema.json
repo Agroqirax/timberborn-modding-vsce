@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Recipe specification",
-  "description": "Add or modify a recipe",
+  "description": "DEPRECATED, use 'Blueprints/Recipes/Recipe.RECIPE.json' instead\nAdd or modify a recipe",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -32,7 +33,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Good", "Amount"],
+        "required": [
+          "Good",
+          "Amount"
+        ],
         "properties": {
           "Good": {
             "type": "object",
@@ -120,7 +124,9 @@
                 "pattern": "^[a-zA-Z0-9_-]+$"
               }
             },
-            "required": ["Id"]
+            "required": [
+              "Id"
+            ]
           },
           "Amount": {
             "type": "number",
@@ -135,7 +141,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Good", "Amount"],
+        "required": [
+          "Good",
+          "Amount"
+        ],
         "properties": {
           "Good": {
             "type": "object",
@@ -223,7 +232,9 @@
                 "pattern": "^[a-zA-Z0-9_-]+$"
               }
             },
-            "required": ["Id"]
+            "required": [
+              "Id"
+            ]
           },
           "Amount": {
             "type": "number",
@@ -238,7 +249,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Good", "Amount"],
+        "required": [
+          "Good",
+          "Amount"
+        ],
         "properties": {
           "Good": {
             "type": "object",
@@ -326,7 +340,9 @@
                 "pattern": "^[a-zA-Z0-9_-]+$"
               }
             },
-            "required": ["Id"]
+            "required": [
+              "Id"
+            ]
           },
           "Amount": {
             "type": "number",
@@ -341,7 +357,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Good", "Amount"],
+        "required": [
+          "Good",
+          "Amount"
+        ],
         "properties": {
           "Good": {
             "type": "object",
@@ -429,7 +448,9 @@
                 "pattern": "^[a-zA-Z0-9_-]+$"
               }
             },
-            "required": ["Id"]
+            "required": [
+              "Id"
+            ]
           },
           "Amount": {
             "type": "number",
@@ -444,7 +465,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Good", "Amount"],
+        "required": [
+          "Good",
+          "Amount"
+        ],
         "properties": {
           "Good": {
             "type": "object",
@@ -532,7 +556,9 @@
                 "pattern": "^[a-zA-Z0-9_-]+$"
               }
             },
-            "required": ["Id"]
+            "required": [
+              "Id"
+            ]
           },
           "Amount": {
             "type": "number",
@@ -547,7 +573,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Good", "Amount"],
+        "required": [
+          "Good",
+          "Amount"
+        ],
         "properties": {
           "Good": {
             "type": "object",
@@ -635,7 +664,9 @@
                 "pattern": "^[a-zA-Z0-9_-]+$"
               }
             },
-            "required": ["Id"]
+            "required": [
+              "Id"
+            ]
           },
           "Amount": {
             "type": "number",
@@ -736,7 +767,9 @@
           "pattern": "^[a-zA-Z0-9_-]+$"
         }
       },
-      "required": ["Id"]
+      "required": [
+        "Id"
+      ]
     },
     "CyclesFuelLasts": {
       "type": "number",

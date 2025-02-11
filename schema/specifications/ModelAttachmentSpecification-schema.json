@@ -1,19 +1,24 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Model attachement specification",
-  "description": "Add or modify a model attachement",
+  "description": "DEPRECATED, use 'Blueprints/ModelAttachements/CATEGORY/ModelAttachement.MODELATTACHEMENT.json' instead\nAdd or modify a model attachement",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "minLength": 1,
-      "examples": ["Bees.Beehive.Folktails"],
+      "examples": [
+        "Bees.Beehive.Folktails"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
     },
     "Prefab": {
       "type": "string",
       "minLength": 1,
-      "examples": ["Buildings/Food/Beehive/Bees/Bees"],
+      "examples": [
+        "Buildings/Food/Beehive/Bees/Bees"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
     },
     "Parent": {
@@ -44,7 +49,11 @@
           "type": "number"
         }
       },
-      "required": ["X", "Y", "Z"]
+      "required": [
+        "X",
+        "Y",
+        "Z"
+      ]
     },
     "Rotation": {
       "type": "object",
@@ -59,7 +68,11 @@
           "type": "number"
         }
       },
-      "required": ["X", "Y", "Z"]
+      "required": [
+        "X",
+        "Y",
+        "Z"
+      ]
     },
     "Scale": {
       "type": "object",
@@ -74,8 +87,16 @@
           "type": "number"
         }
       },
-      "required": ["X", "Y", "Z"]
+      "required": [
+        "X",
+        "Y",
+        "Z"
+      ]
     }
   },
-  "required": ["Id", "Prefab", "Parent"]
+  "required": [
+    "Id",
+    "Prefab",
+    "Parent"
+  ]
 }

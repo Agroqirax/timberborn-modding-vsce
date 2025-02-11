@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Mod manifest",
   "description": "Mod manifest for BepInEx",
   "type": "object",
@@ -51,12 +51,20 @@
                 {
                   "type": "string",
                   "description": "Scenes assets apply tos",
-                  "enum": ["MainMenu", "InGame", "MapEditor", "All"]
+                  "enum": [
+                    "MainMenu",
+                    "InGame",
+                    "MapEditor",
+                    "All"
+                  ]
                 }
               ]
             }
           },
-          "required": ["Prefix", "Scenes"]
+          "required": [
+            "Prefix",
+            "Scenes"
+          ]
         }
       ]
     }

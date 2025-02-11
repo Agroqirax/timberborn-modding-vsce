@@ -1,14 +1,19 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Remove yield strategy specification",
-  "description": "Add or modify a remove yield strategy",
+  "description": "DEPRECATED, use 'Blueprints/RemoveYieldStrategys/RemoveYieldStrategy.REMOVEYIELDSTRATEGY.json' instead\nAdd or modify a remove yield strategy",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "description": "Remove yield specification ID to be modified",
       "minLength": 1,
-      "examples": ["Cuttable", "Ruins", "Uncuttable"],
+      "examples": [
+        "Cuttable",
+        "Ruins",
+        "Uncuttable"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "CompatibleResourceGroups": {
@@ -60,9 +65,16 @@
       "type": "string",
       "description": "Harvesting animation",
       "minLength": 1,
-      "examples": ["Cutting", "Working"],
+      "examples": [
+        "Cutting",
+        "Working"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     }
   },
-  "required": ["Id", "CompatibleResourceGroups", "Animation"]
+  "required": [
+    "Id",
+    "CompatibleResourceGroups",
+    "Animation"
+  ]
 }

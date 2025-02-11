@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Bonus type specification",
-  "description": "Add or modify a bonus type",
+  "description": "DEPRECATED, use 'Blueprints/BonusTypes/BonusType.BONUSTYPE.json' instead\nAdd or modify a bonus type",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -47,5 +48,9 @@
       "default": "Sprites/Bonuses/BONUS"
     }
   },
-  "required": ["Id", "LocKey", "MinimumValue"]
+  "required": [
+    "Id",
+    "LocKey",
+    "MinimumValue"
+  ]
 }

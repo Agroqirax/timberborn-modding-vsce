@@ -1,0 +1,907 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Faction specification",
+  "description": "Add or modify a faction",
+  "type": "object",
+  "properties": {
+    "FactionSpec": {
+      "type": "object",
+      "description": "Faction specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the faction to be modified",
+          "examples": [
+            "Folktails",
+            "IronTeeth"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "Order": {
+          "type": "number",
+          "description": "Place in the new game menu",
+          "default": 0
+        },
+        "DisplayNameLocKey": {
+          "type": "string",
+          "description": "Faction name lockey",
+          "examples": [
+            "Faction.Folktails.DisplayName",
+            "Faction.IronTeeth.DisplayName"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "DescriptionLocKey": {
+          "type": "string",
+          "description": "Faction description lockey",
+          "examples": [
+            "Faction.Folktails.Description",
+            "Faction.IronTeeth.Description"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "Avatar": {
+          "type": "string",
+          "description": "Adult beaver avatar",
+          "examples": [
+            "Sprites/Avatars/FolktailsAdult",
+            "Sprites/Avatars/IronTeethAdult"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "ChildAvatar": {
+          "type": "string",
+          "description": "Child beaver avatar",
+          "examples": [
+            "Sprites/Avatars/FolktailsChild",
+            "Sprites/Avatars/IronTeethChild"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "BotAvatar": {
+          "type": "string",
+          "description": "Bot avatar",
+          "examples": [
+            "Sprites/Avatars/FolktailsBot",
+            "Sprites/Avatars/IronTeethBot"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "ContaminatedAdultAvatar": {
+          "type": "string",
+          "description": "Contaminated adult beaver avatar",
+          "examples": [
+            "Sprites/Avatars/FolktailsContaminatedAdult",
+            "Sprites/Avatars/IronTeethContaminatedAdult"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "ContaminatedChildAvatar": {
+          "type": "string",
+          "description": "Contaminated child beaver avatar",
+          "examples": [
+            "Sprites/Avatars/FolktailsContaminatedChild",
+            "Sprites/Avatars/IronTeethContaminatedChild"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "Logo": {
+          "type": "string",
+          "description": "Faction logo",
+          "examples": [
+            "Sprites/Avatars/FolktailsLogo",
+            "Sprites/Avatars/IronTeethLogo"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "NewGameFullAvatar": {
+          "type": "string",
+          "description": "Faction avatar in new game menu",
+          "examples": [
+            "prites/Avatars/FolktailFullNewGame",
+            "prites/Avatars/IronTeethFullNewGame"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "Textures": {
+          "type": "array",
+          "description": "Adult beaver textures",
+          "items": {
+            "type": "string",
+            "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Materials/Beavers/Folktails/Adult/BeaverAdult1.Folktails",
+            "Materials/Beavers/IronTeeth/Adult/BeaverAdult1.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "Textures#append": {
+          "type": "array",
+          "description": "Append adult beaver textures",
+          "items": {
+            "type": "string",
+            "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Materials/Beavers/Folktails/Adult/BeaverAdult1.Folktails",
+            "Materials/Beavers/IronTeeth/Adult/BeaverAdult1.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "Textures#remove": {
+          "type": "array",
+          "description": "Remove adult beaver textures",
+          "items": {
+            "type": "string",
+            "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Materials/Beavers/Folktails/Adult/BeaverAdult1.Folktails",
+            "Materials/Beavers/IronTeeth/Adult/BeaverAdult1.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "ChildTextures": {
+          "type": "array",
+          "description": "Child beaver textures",
+          "items": {
+            "type": "string",
+            "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Materials/Beavers/Folktails/Adult/BeaverChild1.Folktails",
+            "Materials/Beavers/IronTeeth/Adult/BeaverChild1.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "ChildTextures#append": {
+          "type": "array",
+          "description": "Append child beaver textures",
+          "items": {
+            "type": "string",
+            "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Materials/Beavers/Folktails/Adult/BeaverChild1.Folktails",
+            "Materials/Beavers/IronTeeth/Adult/BeaverChild1.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "ChildTextures#remove": {
+          "type": "array",
+          "description": "Remove child beaver textures",
+          "items": {
+            "type": "string",
+            "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Materials/Beavers/Folktails/Adult/BeaverChild1.Folktails",
+            "Materials/Beavers/IronTeeth/Adult/BeaverChild1.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "MaterialGroups": {
+          "type": "array",
+          "description": "Material group IDs\nDefined in MeterialGroups/MaterialGroup.FACTION.json",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Folktails",
+            "IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "MaterialGroups#append": {
+          "type": "array",
+          "description": "Append material group IDs\nDefined in MeterialGroups/MaterialGroup.FACTION.json",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Folktails",
+            "IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "MaterialGroups#remove": {
+          "type": "array",
+          "description": "Remove material group IDs\nDefined in MeterialGroups/MaterialGroup.FACTION.json",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "examples": [
+            "Folktails",
+            "IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "PrefabGroups": {
+          "type": "array",
+          "description": "Prefab group IDs\nDefined in PrefabGroups/PrefabGroup.CATEGORY.FACTION.json",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          },
+          "examples": [
+            "Buildings.Folktails",
+            "Characters.Folktails",
+            "Landscaping.Folktails",
+            "NaturalResources.Folktails",
+            "Planes.Folktails",
+            "PowerShaftVariants.Folktails",
+            "PumpPipeSegments.Folktails",
+            "Buildings.IronTeeth",
+            "Characters.IronTeeth",
+            "Landscaping.IronTeeth",
+            "NaturalResources.IronTeeth",
+            "Planes.IronTeeth",
+            "PowerShaftVariants.IronTeeth",
+            "PumpPipeSegments.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "PrefabGroups#append": {
+          "type": "array",
+          "description": "Append prefab group IDs\nDefined in PrefabGroups/PrefabGroup.CATEGORY.FACTION.json",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          },
+          "examples": [
+            "Buildings.Folktails",
+            "Characters.Folktails",
+            "Landscaping.Folktails",
+            "NaturalResources.Folktails",
+            "Planes.Folktails",
+            "PowerShaftVariants.Folktails",
+            "PumpPipeSegments.Folktails",
+            "Buildings.IronTeeth",
+            "Characters.IronTeeth",
+            "Landscaping.IronTeeth",
+            "NaturalResources.IronTeeth",
+            "Planes.IronTeeth",
+            "PowerShaftVariants.IronTeeth",
+            "PumpPipeSegments.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "PrefabGroups#remove": {
+          "type": "array",
+          "description": "Remove prefab group IDs\nDefined in PrefabGroups/PrefabGroup.CATEGORY.FACTION.json",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          },
+          "examples": [
+            "Buildings.Folktails",
+            "Characters.Folktails",
+            "Landscaping.Folktails",
+            "NaturalResources.Folktails",
+            "Planes.Folktails",
+            "PowerShaftVariants.Folktails",
+            "PumpPipeSegments.Folktails",
+            "Buildings.IronTeeth",
+            "Characters.IronTeeth",
+            "Landscaping.IronTeeth",
+            "NaturalResources.IronTeeth",
+            "Planes.IronTeeth",
+            "PowerShaftVariants.IronTeeth",
+            "PumpPipeSegments.IronTeeth"
+          ],
+          "minItems": 1
+        },
+        "PathMaterial": {
+          "type": "string",
+          "description": "Path material",
+          "examples": [
+            "Buildings/Paths/Path/Path.Folktails",
+            "Buildings/Paths/Path/Path.IronTeeth"
+          ],
+          "minLength": 1,
+          "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+        },
+        "Needs": {
+          "type": "array",
+          "description": "Faction needs\nDefined in Needs/Need.NEED.json",
+          "examples": [
+            "Agora",
+            "Antidote",
+            "BadwaterContamination",
+            "BeaverStatue",
+            "BeeSting",
+            "Biofuel",
+            "Books",
+            "BrazierOfBonding",
+            "Bread",
+            "BrokenTeeth",
+            "BulletinPole",
+            "Campfire",
+            "Carousel",
+            "Carrots",
+            "Catalyst",
+            "CattailCracker",
+            "ContemplationSpot",
+            "DanceHall",
+            "Detailer",
+            "EarthRecultivator",
+            "FarmerMonument",
+            "FountainOfJoy",
+            "GrilledChestnuts",
+            "GrilledPotatoes",
+            "GrilledSpadderdock",
+            "Hunger",
+            "Injury",
+            "Lantern",
+            "Lido",
+            "MaplePastry",
+            "MudPit",
+            "PunchCard",
+            "Roof",
+            "RooftopTerrace",
+            "Scarecrow",
+            "Shelter",
+            "Shrub",
+            "Sleep",
+            "SunflowerSeeds",
+            "Thirst",
+            "WetFur",
+            "AlgaeRation",
+            "BeaverBust",
+            "Brazier",
+            "Clock",
+            "Coffee",
+            "ControlTower",
+            "CornRation",
+            "EarthRepopulator",
+            "EggplantRation",
+            "Energy",
+            "ExercisePlaza",
+            "FermentedCassava",
+            "FermentedMushroom",
+            "FermentedSoybean",
+            "FlameOfUnity",
+            "Grease",
+            "Kohlrabi",
+            "LaborerMonument",
+            "MangroveFruit",
+            "Motivatorium",
+            "MudBath",
+            "SwimmingPool",
+            "TributeToIngenuity",
+            "WindTunnel"
+          ],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "minItems": 1
+        },
+        "Needs#append": {
+          "type": "array",
+          "description": "Append faction needs\nDefined in Needs/Need.NEED.json",
+          "examples": [
+            "Agora",
+            "Antidote",
+            "BadwaterContamination",
+            "BeaverStatue",
+            "BeeSting",
+            "Biofuel",
+            "Books",
+            "BrazierOfBonding",
+            "Bread",
+            "BrokenTeeth",
+            "BulletinPole",
+            "Campfire",
+            "Carousel",
+            "Carrots",
+            "Catalyst",
+            "CattailCracker",
+            "ContemplationSpot",
+            "DanceHall",
+            "Detailer",
+            "EarthRecultivator",
+            "FarmerMonument",
+            "FountainOfJoy",
+            "GrilledChestnuts",
+            "GrilledPotatoes",
+            "GrilledSpadderdock",
+            "Hunger",
+            "Injury",
+            "Lantern",
+            "Lido",
+            "MaplePastry",
+            "MudPit",
+            "PunchCard",
+            "Roof",
+            "RooftopTerrace",
+            "Scarecrow",
+            "Shelter",
+            "Shrub",
+            "Sleep",
+            "SunflowerSeeds",
+            "Thirst",
+            "WetFur",
+            "AlgaeRation",
+            "BeaverBust",
+            "Brazier",
+            "Clock",
+            "Coffee",
+            "ControlTower",
+            "CornRation",
+            "EarthRepopulator",
+            "EggplantRation",
+            "Energy",
+            "ExercisePlaza",
+            "FermentedCassava",
+            "FermentedMushroom",
+            "FermentedSoybean",
+            "FlameOfUnity",
+            "Grease",
+            "Kohlrabi",
+            "LaborerMonument",
+            "MangroveFruit",
+            "Motivatorium",
+            "MudBath",
+            "SwimmingPool",
+            "TributeToIngenuity",
+            "WindTunnel"
+          ],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "minItems": 1
+        },
+        "Needs#remove": {
+          "type": "array",
+          "description": "Remove faction needs\nDefined in Needs/Need.NEED.json",
+          "examples": [
+            "Agora",
+            "Antidote",
+            "BadwaterContamination",
+            "BeaverStatue",
+            "BeeSting",
+            "Biofuel",
+            "Books",
+            "BrazierOfBonding",
+            "Bread",
+            "BrokenTeeth",
+            "BulletinPole",
+            "Campfire",
+            "Carousel",
+            "Carrots",
+            "Catalyst",
+            "CattailCracker",
+            "ContemplationSpot",
+            "DanceHall",
+            "Detailer",
+            "EarthRecultivator",
+            "FarmerMonument",
+            "FountainOfJoy",
+            "GrilledChestnuts",
+            "GrilledPotatoes",
+            "GrilledSpadderdock",
+            "Hunger",
+            "Injury",
+            "Lantern",
+            "Lido",
+            "MaplePastry",
+            "MudPit",
+            "PunchCard",
+            "Roof",
+            "RooftopTerrace",
+            "Scarecrow",
+            "Shelter",
+            "Shrub",
+            "Sleep",
+            "SunflowerSeeds",
+            "Thirst",
+            "WetFur",
+            "AlgaeRation",
+            "BeaverBust",
+            "Brazier",
+            "Clock",
+            "Coffee",
+            "ControlTower",
+            "CornRation",
+            "EarthRepopulator",
+            "EggplantRation",
+            "Energy",
+            "ExercisePlaza",
+            "FermentedCassava",
+            "FermentedMushroom",
+            "FermentedSoybean",
+            "FlameOfUnity",
+            "Grease",
+            "Kohlrabi",
+            "LaborerMonument",
+            "MangroveFruit",
+            "Motivatorium",
+            "MudBath",
+            "SwimmingPool",
+            "TributeToIngenuity",
+            "WindTunnel"
+          ],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
+          "minItems": 1
+        },
+        "Goods": {
+          "type": "array",
+          "description": "Faction goods\nDefined in Goods/Good.GOOD.json",
+          "examples": [
+            "Antidote",
+            "Badwater",
+            "Berries",
+            "Biofuel",
+            "Book",
+            "BotChassis",
+            "BotHead",
+            "BotLimb",
+            "Bread",
+            "Carrot",
+            "Catalyst",
+            "CattailCracker",
+            "CattailFlour",
+            "CattailRoot",
+            "Chestnut",
+            "Dandelion",
+            "Dirt",
+            "Explosives",
+            "Extract",
+            "Gear",
+            "GrilledChestnut",
+            "GrilledPotato",
+            "GrilledSpadderdock",
+            "Log",
+            "MaplePastry",
+            "MapleSyrup",
+            "MetalBlock",
+            "Paper",
+            "PineResin",
+            "Plank",
+            "Potato",
+            "PunchCard",
+            "ScrapMetal",
+            "Spadderdock",
+            "SunflowerSeeds",
+            "TreatedPlank",
+            "Water",
+            "Wheat",
+            "WheatFlour",
+            "Algae",
+            "AlgaeRation",
+            "CanolaOil",
+            "CanolaSeeds",
+            "Cassava",
+            "Coffee",
+            "CoffeeBean",
+            "Corn",
+            "CornRation",
+            "Eggplant",
+            "EggplantRation",
+            "FermentedCassava",
+            "FermentedMushroom",
+            "FermentedSoybean",
+            "Grease",
+            "Kohlrabi",
+            "MangroveFruit",
+            "Mushroom",
+            "Soybean"
+          ],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "Goods#append": {
+          "type": "array",
+          "description": "Append faction goods\nDefined in Goods/Good.GOOD.json",
+          "examples": [
+            "Antidote",
+            "Badwater",
+            "Berries",
+            "Biofuel",
+            "Book",
+            "BotChassis",
+            "BotHead",
+            "BotLimb",
+            "Bread",
+            "Carrot",
+            "Catalyst",
+            "CattailCracker",
+            "CattailFlour",
+            "CattailRoot",
+            "Chestnut",
+            "Dandelion",
+            "Dirt",
+            "Explosives",
+            "Extract",
+            "Gear",
+            "GrilledChestnut",
+            "GrilledPotato",
+            "GrilledSpadderdock",
+            "Log",
+            "MaplePastry",
+            "MapleSyrup",
+            "MetalBlock",
+            "Paper",
+            "PineResin",
+            "Plank",
+            "Potato",
+            "PunchCard",
+            "ScrapMetal",
+            "Spadderdock",
+            "SunflowerSeeds",
+            "TreatedPlank",
+            "Water",
+            "Wheat",
+            "WheatFlour",
+            "Algae",
+            "AlgaeRation",
+            "CanolaOil",
+            "CanolaSeeds",
+            "Cassava",
+            "Coffee",
+            "CoffeeBean",
+            "Corn",
+            "CornRation",
+            "Eggplant",
+            "EggplantRation",
+            "FermentedCassava",
+            "FermentedMushroom",
+            "FermentedSoybean",
+            "Grease",
+            "Kohlrabi",
+            "MangroveFruit",
+            "Mushroom",
+            "Soybean"
+          ],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "Goods#remove": {
+          "type": "array",
+          "description": "Remove faction goods\nDefined in Goods/Good.GOOD.json",
+          "examples": [
+            "Antidote",
+            "Badwater",
+            "Berries",
+            "Biofuel",
+            "Book",
+            "BotChassis",
+            "BotHead",
+            "BotLimb",
+            "Bread",
+            "Carrot",
+            "Catalyst",
+            "CattailCracker",
+            "CattailFlour",
+            "CattailRoot",
+            "Chestnut",
+            "Dandelion",
+            "Dirt",
+            "Explosives",
+            "Extract",
+            "Gear",
+            "GrilledChestnut",
+            "GrilledPotato",
+            "GrilledSpadderdock",
+            "Log",
+            "MaplePastry",
+            "MapleSyrup",
+            "MetalBlock",
+            "Paper",
+            "PineResin",
+            "Plank",
+            "Potato",
+            "PunchCard",
+            "ScrapMetal",
+            "Spadderdock",
+            "SunflowerSeeds",
+            "TreatedPlank",
+            "Water",
+            "Wheat",
+            "WheatFlour",
+            "Algae",
+            "AlgaeRation",
+            "CanolaOil",
+            "CanolaSeeds",
+            "Cassava",
+            "Coffee",
+            "CoffeeBean",
+            "Corn",
+            "CornRation",
+            "Eggplant",
+            "EggplantRation",
+            "FermentedCassava",
+            "FermentedMushroom",
+            "FermentedSoybean",
+            "Grease",
+            "Kohlrabi",
+            "MangroveFruit",
+            "Mushroom",
+            "Soybean"
+          ],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "NeedModifications": {
+          "type": "array",
+          "description": "Need modifications",
+          "items": {
+            "properties": {}
+          }
+        },
+        "NeedModifications#append": {
+          "type": "array",
+          "description": "Append need modifications",
+          "items": {
+            "properties": {}
+          }
+        },
+        "NeedModifications#remove": {
+          "type": "array",
+          "description": "Remove need modifications",
+          "items": {
+            "properties": {}
+          }
+        },
+        "StartingBuildingId": {
+          "type": "string",
+          "description": "District center building ID",
+          "examples": [
+            "DistrictCenter.Folktails",
+            "DistrictCenter.IronTeeth"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+        },
+        "SoundId": {
+          "type": "string",
+          "description": "Faction sounds",
+          "examples": [
+            "Common"
+          ],
+          "default": "Common",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "BotId": {
+          "type": "string",
+          "description": "Bot ID",
+          "examples": [
+            "Bot.Folktails",
+            "Bot.IronTeeth"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
+        },
+        "GameOverMessageLocKey": {
+          "type": "string",
+          "description": "Game over message lockey",
+          "examples": [
+            "Faction.Folktails.GameOver.Message",
+            "Faction.IronTeeth.GameOver.Message"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "GameOverFlavorLocKey": {
+          "type": "string",
+          "description": "Game over flavor lockey",
+          "examples": [
+            "Faction.Folktails.GameOver.Flavor",
+            "Faction.IronTeeth.GameOver.Flavor"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        }
+      },
+      "minItems": 1,
+      "required": [
+        "Id"
+      ]
+    },
+    "UnlockableFactionSpec": {
+      "type": "object",
+      "description": "Requirements to unlock faction",
+      "properties": {
+        "PrerequisiteFaction": {
+          "type": "string",
+          "description": "Reference faction for wellbeing unlock\nLeave empty to unlock by default",
+          "examples": [
+            "Folktails",
+            "IronTeeth"
+          ],
+          "pattern": "^[a-zA-Z0-9_-]*$",
+          "minLength": 1
+        },
+        "AverageWellbeingToUnlock": {
+          "type": "number",
+          "description": "Average wellbeing to unlock"
+        }
+      },
+      "required": [
+        "PrerequisiteFaction",
+        "AverageWellbeingToUnlock"
+      ]
+    },
+    "FactionWonderSpec": {
+      "type": "object",
+      "description": "Faction wonder specification",
+      "properties": {
+        "WonderCompletionFlavorLocKey": {
+          "type": "string",
+          "description": "Wonder completion flavor lockey",
+          "examples": [
+            "Faction.Folktails.WonderCompletionFlavor",
+            "Faction.IronTeeth.WonderCompletionFlavor"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "WonderCompletionMessageLocKey": {
+          "type": "string",
+          "description": "Wonder completion message lockey",
+          "examples": [
+            "Faction.Folktails.WonderCompletionMessage",
+            "Faction.IronTeeth.WonderCompletionMessage"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "WonderCompletionImage": {
+          "type": "string",
+          "description": "Wonder completion banner image",
+          "examples": [
+            "UI/Images/WonderCompletion/wonder-completion-folktails",
+            "UI/Images/WonderCompletion/wonder-completion-ironteeth"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "WonderLaunchSound": {
+          "type": "string",
+          "description": "Wonder launch sound",
+          "examples": [
+            "UI.Buildings.Wonder.EarthRecultivator",
+            "UI.Buildings.Wonder.EarthRepopulator"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        }
+      },
+      "required": [
+        "WonderCompletionFlavorLocKey",
+        "WonderCompletionMessageLocKey",
+        "WonderCompletionImage",
+        "WonderLaunchSound"
+      ]
+    }
+  },
+  "required": [
+    "FactionSpec"
+  ]
+}

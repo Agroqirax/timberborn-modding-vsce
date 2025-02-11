@@ -58,9 +58,11 @@
     "licence": "license",
     "licence.md": "license",
     "licence.txt": "license",
-    "manifest.json": "config"
+    "manifest.json": "config",
+    "mod.json": "config"
   },
   "folderNames": {
+    "blueprints": "folder-config",
     "specifications": "folder-config"
   },
   "folderNamesExpanded": {}

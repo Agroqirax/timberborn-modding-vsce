@@ -1,28 +1,40 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Worker outfit specification",
-  "description": "Add or modify a worker outfit",
+  "description": "DEPRECATED, use 'Blueprints/WorkerOutfits/WorkerOutfit.WORKEROUTFIT.TYPE.FACTION.json' instead\nAdd or modify a worker outfit",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "description": "Worker outfit ID",
       "minLength": 1,
-      "examples": ["Builder", "Farmer", "Hauler", "Pilot"],
+      "examples": [
+        "Builder",
+        "Farmer",
+        "Hauler",
+        "Pilot"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "FactionId": {
       "type": "string",
       "description": "Faction ID",
       "minLength": 1,
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "WorkerType": {
       "type": "string",
       "description": "Worker type",
       "minLength": 1,
-      "examples": ["Beaver", "Bot"],
+      "examples": [
+        "Beaver",
+        "Bot"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "DiffuseTexture": {
@@ -97,6 +109,10 @@
       }
     }
   },
-  "required": ["Id", "FactionId", "WorkerType"],
+  "required": [
+    "Id",
+    "FactionId",
+    "WorkerType"
+  ],
   "minProperties": 4
 }

@@ -1,14 +1,18 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Materialgroup specification",
-  "description": "Add or modify a material group",
+  "description": "DEPRECATED, use 'Blueprints/MaterialGroups/MaterialGroup.MATERIALGROUP.json' instead\nAdd or modify a material group",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "description": "Material group ID to be modified",
       "minLength": 1,
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "Paths": {
@@ -264,5 +268,8 @@
       "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
     }
   },
-  "required": ["Id", "Paths"]
+  "required": [
+    "Id",
+    "Paths"
+  ]
 }

@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Toolgroup specification",
-  "description": "Add or modify a toolgroup",
+  "description": "DEPRECATED, use 'Blueprints/ToolGroups/ToolGroup.TOOLGROUP.json' instead\nAdd or modify a toolgroup",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -93,5 +94,11 @@
       "default": false
     }
   },
-  "required": ["Id", "Order", "NameLocKey", "Icon", "FallbackGroup"]
+  "required": [
+    "Id",
+    "Order",
+    "NameLocKey",
+    "Icon",
+    "FallbackGroup"
+  ]
 }

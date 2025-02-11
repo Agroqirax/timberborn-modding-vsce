@@ -1,14 +1,30 @@
 # Changelog
 
-## [v0.0.3] - 2024-12-23
+## [v0.0.4] - 2025-02-11
+
+### Added
+
+- ✅ Deprecated specifications & added blueprints (U7)
+- ✏️ Snippets for manifest files & blueprints (U7)
+- 🙋‍♂️ Asset export & unity setup walktrough
 
 ### Changed
 
 - 🐛 Bug fixes
 
+### Fixed
+
+- ❌ Removed `tools/*` and `.venv/*` folders from vsix
+
+## [v0.0.3] - 2024-12-23
+
 ### Added
 
 - 🎨 File icon theme
+
+### Changed
+
+- 🐛 Bug fixes
 
 ## [v0.0.2] - 2024-12-21
 

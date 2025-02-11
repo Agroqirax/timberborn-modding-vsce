@@ -2,7 +2,7 @@
   "name": "timberborn-modding-ext",
   "displayName": "%extension.displayName%",
   "description": "%extension.description%",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "SEE LICENSE IN LICENSE.md",
   "keywords": [
     "timberborn",
@@ -251,6 +251,10 @@
         "path": "./snippets/specifications.code-snippets"
       },
       {
+        "language": "json",
+        "path": "./snippets/blueprints.code-snippets"
+      },
+      {
         "language": "plaintext",
         "path": "./snippets/csv.code-snippets"
       },
@@ -286,139 +290,133 @@
         "fileMatch": [
           "**/Specifications/BonusTypes/BonusTypeSpecification.*.json"
         ],
-        "url": "./schema/BonusTypeSpecification-schema.json"
+        "url": "./schema/specifications/BonusTypeSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Factions/FactionSpecification.*.json"
         ],
-        "url": "./schema/FactionSpecification-schema.json"
+        "url": "./schema/specifications/FactionSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/GoodGroups/GoodGroupSpecification.*.json"
         ],
-        "url": "./schema/GoodGroupSpecification-schema.json"
+        "url": "./schema/specifications/GoodGroupSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Goods/GoodSpecification.*.json"
         ],
-        "url": "./schema/GoodSpecification-schema.json"
+        "url": "./schema/specifications/GoodSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/KeyBindingGroups/KeyBindingGroupSpecification.*.json"
         ],
-        "url": "./schema/KeyBindingGroupSpecification-schema.json"
+        "url": "./schema/specifications/KeyBindingGroupSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/KeyBindings/*/KeyBindingSpecification.*.json"
         ],
-        "url": "./schema/KeyBindingSpecification-schema.json"
+        "url": "./schema/specifications/KeyBindingSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/MaterialGroups/MaterialGroupSpecification.*.json"
         ],
-        "url": "./schema/MaterialGroupSpecification-schema.json"
+        "url": "./schema/specifications/MaterialGroupSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/ModelAttachment/*/ModelAttachmentSpecification.*.*.*.json"
         ],
-        "url": "./schema/ModelAttachmentSpecification-schema.json"
+        "url": "./schema/specifications/ModelAttachmentSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/NeedGroups/NeedGroupSpecification.*.json"
         ],
-        "url": "./schema/NeedGroupSpecification-schema.json"
+        "url": "./schema/specifications/NeedGroupSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Needs/NeedSpecification.*.json"
         ],
-        "url": "./schema/NeedSpecification-schema.json"
+        "url": "./schema/specifications/NeedSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/NeedsAffectedBySoakedness/NeedsAffectedBySoakednessSpecification.*.json"
         ],
-        "url": "./schema/NeedsAffectedBySoakednessSpecification-schema.json"
+        "url": "./schema/specifications/NeedsAffectedBySoakednessSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/NeedsAffectingWork/NeedsAffectingWorkSpecification.*.json"
         ],
-        "url": "./schema/NeedsAffectingWorkSpecification-schema.json"
+        "url": "./schema/specifications/NeedsAffectingWorkSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/PrefabGroupSpecification/PrefabGroupSpecification.*.*.json"
         ],
-        "url": "./schema/PrefabGroupSpecification-schema.json"
+        "url": "./schema/specifications/PrefabGroupSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Recipes/RecipeSpecification.*.json"
         ],
-        "url": "./schema/RecipeSpecification-schema.json"
+        "url": "./schema/specifications/RecipeSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/RemoveYieldStrategies/RemoveYieldStrategySpecification.*.json"
         ],
-        "url": "./schema/RemoveYieldStrategySpecification-schema.json"
+        "url": "./schema/specifications/RemoveYieldStrategySpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/TailDecals/TailDecalSpecification.*.*.json"
         ],
-        "url": "./schema/TailDecalSpecification-schema.json"
+        "url": "./schema/specifications/TailDecalSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/ToolGroups/ToolGroupSpecification.*.*.json"
         ],
-        "url": "./schema/ToolgroupSpecification-schema.json"
+        "url": "./schema/specifications/ToolgroupSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/WellbeingTiers/WellbeingTierSpecification.*.*.json"
         ],
-        "url": "./schema/WellbeingTierSpecification-schema.json"
+        "url": "./schema/specifications/WellbeingTierSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/WorkerOutfits/WorkerOutfitSpecification.*.*.*.json"
         ],
-        "url": "./schema/WorkerOutfitSpecification-schema.json"
+        "url": "./schema/specifications/WorkerOutfitSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/WorkerTypes/WorkerTypeSpecification.*.*.json"
         ],
-        "url": "./schema/WorkerTypeSpecification-schema.json"
+        "url": "./schema/specifications/WorkerTypeSpecification-schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/YieldRemovalChanceBonuses/YieldRemovalChanceBonusSpecification.*.*.json"
         ],
-        "url": "./schema/YieldRemovalChanceBonusSpecification-schema.json"
+        "url": "./schema/specifications/YieldRemovalChanceBonusSpecification-schema.json"
       },
       {
         "fileMatch": [
-          "**/map_metadata.json"
+          "**/Blueprints/Factions/Faction.*.json"
         ],
-        "url": "./schema/map_metadata-schema.json"
-      },
-      {
-        "fileMatch": [
-          "**/save_metadata.json"
-        ],
-        "url": "./schema/save_metadata-schema.json"
+        "url": "./schema/blueprints/Faction-schema.json"
       }
     ],
     "walkthroughs": [
@@ -512,6 +510,84 @@
               "onCommand:workbench.action.selectTheme",
               "onCommand:workbench.action.selectIconTheme",
               "onCommand:workbench.action.selectProductIconTheme"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "timberborn-modding-ext-exporting-assets",
+        "title": "%walktroughs.exporting-assets.title%",
+        "description": "%walktroughs.exporting-assets.description%",
+        "steps": [
+          {
+            "id": "assetripper-download",
+            "title": "%walktroughs.exporting-assets.assetripper-download.title%",
+            "description": "%walktroughs.exporting-assets.assetripper-download.description%",
+            "media": {
+              "image": "./walktroughs/assets/assetripper-download.png",
+              "altText": "%walktroughs.exporting-assets.assetripper-download.alt-txt%"
+            },
+            "completionEvents": [
+              "onLink:https://github.com/AssetRipper/AssetRipper/releases/latest"
+            ]
+          },
+          {
+            "id": "assetripper-run",
+            "title": "%walktroughs.exporting-assets.assetripper-run.title%",
+            "description": "%walktroughs.exporting-assets.assetripper-run.description%",
+            "media": {
+              "image": "./walktroughs/assets/assetripper-run.png",
+              "altText": "%walktroughs.exporting-assets.assetripper-run.alt-txt%"
+            },
+            "completionEvents": [
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "repo-download",
+            "title": "%walktroughs.exporting-assets.repo-download.title%",
+            "description": "%walktroughs.exporting-assets.repo-download.description%",
+            "media": {
+              "image": "./walktroughs/assets/repo-download.png",
+              "altText": "%walktroughs.exporting-assets.repo-download.alt-txt%"
+            },
+            "completionEvents": [
+              "onLink:https://github.com/mechanistry/timberborn-modding"
+            ]
+          },
+          {
+            "id": "files-config",
+            "title": "%walktroughs.exporting-assets.files-config.title%",
+            "description": "%walktroughs.exporting-assets.files-config.description%",
+            "media": {
+              "markdown": "./walktroughs/assets/file-tree.md"
+            },
+            "completionEvents": [
+              "onStepSelected"
+            ]
+          },
+          {
+            "id": "unity-download",
+            "title": "%walktroughs.exporting-assets.unity-download.title%",
+            "description": "%walktroughs.exporting-assets.unity-download.description%",
+            "media": {
+              "image": "./walktroughs/assets/unity-download.png",
+              "altText": "%walktroughs.exporting-assets.unity-download.alt-txt%"
+            },
+            "completionEvents": [
+              "onLink:https://unity.com/download"
+            ]
+          },
+          {
+            "id": "unity-run",
+            "title": "%walktroughs.exporting-assets.unity-run.title%",
+            "description": "%walktroughs.exporting-assets.unity-run.description%",
+            "media": {
+              "image": "./walktroughs/assets/unity-run.png",
+              "altText": "%walktroughs.exporting-assets.unity-run.alt-txt%"
+            },
+            "completionEvents": [
+              "onStepSelected"
             ]
           }
         ]

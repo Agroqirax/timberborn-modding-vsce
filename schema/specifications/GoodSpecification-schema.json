@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Good specification",
-  "description": "Add or modify a good",
+  "description": "DEPRECATED, use 'Blueprints/Goods/Good.GOOD.json' instead\nAdd or modify a good",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -406,13 +407,21 @@
       "type": "string",
       "description": "Storage type",
       "minLength": 1,
-      "enum": ["Box", "Liquid", "Pileable"]
+      "enum": [
+        "Box",
+        "Liquid",
+        "Pileable"
+      ]
     },
     "StockpileVisualization": {
       "type": "string",
       "description": "Storage visualisation",
       "minLength": 1,
-      "examples": ["Box", "Liquid", "Pileable"]
+      "examples": [
+        "Box",
+        "Liquid",
+        "Pileable"
+      ]
     },
     "VisibleContainer": {
       "type": "object",
@@ -421,10 +430,15 @@
         "Value": {
           "type": "string",
           "minLength": 1,
-          "examples": ["Box", "Barrel"]
+          "examples": [
+            "Box",
+            "Barrel"
+          ]
         }
       },
-      "required": ["Value"]
+      "required": [
+        "Value"
+      ]
     },
     "ContainerColor": {
       "type": "string",
@@ -438,7 +452,10 @@
       "description": "Carry animation ID",
       "minLength": 1,
       "default": "CarryInHands",
-      "examples": ["CarryInHands", "CarryOnArm"]
+      "examples": [
+        "CarryInHands",
+        "CarryOnArm"
+      ]
     },
     "Weight": {
       "type": "number",
@@ -449,7 +466,13 @@
       "type": "string",
       "description": "Good group ID\nDefined in GoodGroupSpecification.GROUP.json",
       "minLength": 1,
-      "examples": ["Food", "Ingredients", "Log", "Materials", "Water"]
+      "examples": [
+        "Food",
+        "Ingredients",
+        "Log",
+        "Materials",
+        "Water"
+      ]
     },
     "Icon": {
       "type": "string",

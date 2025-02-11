@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Mod manifest",
   "description": "Define a timberborn mod",
   "type": "object",
@@ -48,7 +48,9 @@
       "uniqueItems": true,
       "minItems": 0,
       "items": {
-        "required": ["Id"],
+        "required": [
+          "Id"
+        ],
         "properties": {
           "Id": {
             "type": "string",
@@ -73,7 +75,9 @@
       "uniqueItems": true,
       "minItems": 0,
       "items": {
-        "required": ["Id"],
+        "required": [
+          "Id"
+        ],
         "properties": {
           "Id": {
             "type": "string",
@@ -93,5 +97,11 @@
       }
     }
   },
-  "required": ["Name", "Version", "Id", "MinimumGameVersion", "Description"]
+  "required": [
+    "Name",
+    "Version",
+    "Id",
+    "MinimumGameVersion",
+    "Description"
+  ]
 }

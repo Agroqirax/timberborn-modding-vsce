@@ -1,14 +1,18 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Tail decal specification",
-  "description": "Add or modify a tail decal",
+  "description": "DEPRECATED, use 'Blueprints/TailDecals/Taildecal.TAILDECAL.FACTION.json' instead\nAdd or modify a tail decal",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "FactionId": {
       "type": "string",
       "description": "Faction ID for tail specification",
       "minLength": 1,
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "Texture": {
@@ -22,5 +26,8 @@
       "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
     }
   },
-  "required": ["FactionId", "Texture"]
+  "required": [
+    "FactionId",
+    "Texture"
+  ]
 }

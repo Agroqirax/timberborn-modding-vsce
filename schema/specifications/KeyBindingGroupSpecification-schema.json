@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Keybindinggroup specification",
-  "description": "Add or modify a keybinding group",
+  "description": "DEPRECATED, use 'Blueprints/KeyBindingGroups/KeyBindingGroup.KEYBINDNGGROUP.json' instead\nAdd or modify a keybinding group",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -43,5 +44,9 @@
       "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
     }
   },
-  "required": ["Id", "Order", "LocKey"]
+  "required": [
+    "Id",
+    "Order",
+    "LocKey"
+  ]
 }

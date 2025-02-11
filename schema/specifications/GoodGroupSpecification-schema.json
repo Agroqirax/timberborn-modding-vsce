@@ -1,14 +1,21 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Goodgroup specification",
-  "description": "Add or modify a goodgroup",
+  "description": "DEPRECATED, use 'Blueprints/GoodGroups/GoodGroup.GOODGROUP.json' instead\nAdd or modify a goodgroup",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "description": "Good group ID to be modified",
       "minLength": 1,
-      "examples": ["Food", "Ingredients", "Log", "Materials", "Water"],
+      "examples": [
+        "Food",
+        "Ingredients",
+        "Log",
+        "Materials",
+        "Water"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "Order": {

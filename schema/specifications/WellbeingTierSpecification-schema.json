@@ -1,14 +1,19 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Wellbeing tier specification",
-  "description": "Add or modify a wellbeing tier",
+  "description": "DEPRECATED, use 'Blueprints/WellbeingTiers/WellbeingTier.TYPE.WELLBEINGTIER.json' instead\nAdd or modify a wellbeing tier",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "CharacterType": {
       "type": "string",
       "description": "Character type affected",
       "minLength": 1,
-      "examples": ["BeaverAdult", "BeaverChild", "Bot"],
+      "examples": [
+        "BeaverAdult",
+        "BeaverChild",
+        "Bot"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "BonusId": {
@@ -29,7 +34,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Wellbeing", "Multiplier"],
+        "required": [
+          "Wellbeing",
+          "Multiplier"
+        ],
         "properties": {
           "Wellbeing": {
             "type": "number",
@@ -48,7 +56,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Wellbeing", "Multiplier"],
+        "required": [
+          "Wellbeing",
+          "Multiplier"
+        ],
         "properties": {
           "Wellbeing": {
             "type": "number",
@@ -67,7 +78,10 @@
       "uniqueItems": true,
       "minItems": 1,
       "items": {
-        "required": ["Wellbeing", "Multiplier"],
+        "required": [
+          "Wellbeing",
+          "Multiplier"
+        ],
         "properties": {
           "Wellbeing": {
             "type": "number",

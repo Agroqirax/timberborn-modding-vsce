@@ -33,7 +33,7 @@ Most features work out-of-the-box but a few must be configured
 
 ## Ideas
 
-- 📢 Mod publisher (upload to mod.io, thunderstore, github releases)
+- 📢 Mod publisher
 - 🪵 Error log viewer
 
 ## Problems

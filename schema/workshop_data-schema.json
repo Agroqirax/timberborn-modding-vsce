@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Workshop data",
   "description": "Workshop data for steam workshop",
   "type": "object",
@@ -9,19 +9,28 @@
       "description": "Steam workshop ID",
       "minLength": 10,
       "maxLength": 10,
-      "examples": ["3275060459"],
+      "examples": [
+        "3275060459"
+      ],
       "pattern": "^[0-9]+$"
     },
     "Name": {
       "type": "string",
       "description": "Steam workshop name",
       "minLength": 1,
-      "examples": ["Shanty Speaker"]
+      "examples": [
+        "Shanty Speaker"
+      ]
     },
     "Visibility": {
       "type": "string",
       "description": "Steam workshop visibility level",
-      "enum": ["Public", "Friends-only", "Private", "Unlisted"]
+      "enum": [
+        "Public",
+        "Friends-only",
+        "Private",
+        "Unlisted"
+      ]
     },
     "UpdateDescription": {
       "type": "boolean",

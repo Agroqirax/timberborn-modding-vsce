@@ -1,14 +1,17 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Yield removal chance bonus specification",
-  "description": "Add or modify a yield removal chance bonus",
+  "description": "DEPRECATED, use 'Blueprints/YieldRemovalChanceBonuses/YieldRemovalChanceBonus.YIELDREMOVALCHANCEBONUS.json' instead\nAdd or modify a yield removal chance bonus",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "BonusId": {
       "type": "string",
       "description": "Bonus ID to be modified",
       "minLength": 1,
-      "examples": ["CuttingSuccessChance"],
+      "examples": [
+        "CuttingSuccessChance"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "GoodId": {
@@ -95,5 +98,8 @@
       "pattern": "^[a-zA-Z0-9_-]+$"
     }
   },
-  "required": ["BonusId", "GoodId"]
+  "required": [
+    "BonusId",
+    "GoodId"
+  ]
 }

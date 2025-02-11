@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Prefab group specification",
-  "description": "Add or modify a prefab group",
+  "description": "DEPRECATED, use 'Blueprints/PrefabGroups/PrefabGroup.PREFABGROUP.FACTION.json' instead\nAdd or modify a prefab group",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -1023,6 +1024,8 @@
       }
     }
   },
-  "required": ["Id"],
+  "required": [
+    "Id"
+  ],
   "minProperties": 2
 }

@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Need specification",
-  "description": "Add or modify a need",
+  "description": "DEPRECATED, use 'Blueprints/Needs/Need.TYPE.NEED.json' instead\nAdd or modify a need",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -56,7 +57,10 @@
       "type": "string",
       "description": "Character type affected",
       "minLength": 1,
-      "enum": ["Beaver", "Bot"]
+      "enum": [
+        "Beaver",
+        "Bot"
+      ]
     },
     "DisplayNameLocKey": {
       "type": "string",
@@ -95,21 +99,31 @@
         "Value": {
           "type": "string",
           "minLength": 1,
-          "enum": ["None", "State"]
+          "enum": [
+            "None",
+            "State"
+          ]
         }
       },
-      "required": ["Value"]
+      "required": [
+        "Value"
+      ]
     },
     "CriticalSpriteName": {
       "type": "string",
       "description": "Warning icon",
-      "examples": ["Hunger", "Thirst"],
+      "examples": [
+        "Hunger",
+        "Thirst"
+      ],
       "pattern": "^(|[a-zA-Z0-9_-]+)$"
     },
     "CriticalDescriptionLocKey": {
       "type": "string",
       "description": "Need warning loc key",
-      "examples": ["Status.Need.Thirst"],
+      "examples": [
+        "Status.Need.Thirst"
+      ],
       "pattern": "^(|[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*)$"
     },
     "DeathOnMinValue": {
@@ -143,5 +157,7 @@
       "default": -10
     }
   },
-  "required": ["Id"]
+  "required": [
+    "Id"
+  ]
 }

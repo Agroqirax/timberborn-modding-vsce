@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Keybinding specification",
-  "description": "Add or modify a keybinding",
+  "description": "DEPRECATED, use 'Blueprints/KeyBindingSpecifications/KeyBindingSpecification.KEYBINDINGSPECIFICATION.json' instead\nAdd or modify a keybinding",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
@@ -206,5 +207,10 @@
       "description": "Place in the settings menu"
     }
   },
-  "required": ["Id", "GroupId", "LocKey", "Order"]
+  "required": [
+    "Id",
+    "GroupId",
+    "LocKey",
+    "Order"
+  ]
 }

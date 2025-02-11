@@ -1,14 +1,17 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Needs affected by soakedness specification",
-  "description": "Add or modify a need affected by soakedness",
+  "description": "DEPRECATED, use 'Blueprints/Needs/Need.TYPE.NEED.json' instead\nAdd or modify a need affected by soakedness",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "NeedId": {
       "type": "string",
       "description": "Need Id to be modified",
       "minLength": 1,
-      "examples": ["WetFur"],
+      "examples": [
+        "WetFur"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "PointsPerHour": {
@@ -17,5 +20,8 @@
       "default": 0.5
     }
   },
-  "required": ["NeedId", "PointsPerHour"]
+  "required": [
+    "NeedId",
+    "PointsPerHour"
+  ]
 }

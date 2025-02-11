@@ -1,14 +1,18 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Faction specification",
-  "description": "Add or modify a faction",
+  "description": "DEPRECATED, use 'Blueprints/Factions/Faction.FACTION.json' instead\nAdd or modify a faction",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "description": "Faction ID to be modified",
       "minLength": 1,
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "Order": {
@@ -182,7 +186,10 @@
     "MaterialGroups": {
       "type": "array",
       "description": "Material group IDs\nDefined in MaterialGroupSpecification.FACTION.json",
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "items": {
         "type": "string",
         "pattern": "^[a-zA-Z0-9_-]+$"
@@ -191,7 +198,10 @@
     "MaterialGroups#append": {
       "type": "array",
       "description": "Append material group IDs\nDefined in MaterialGroupSpecification.FACTION.json",
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "items": {
         "type": "string",
         "pattern": "^[a-zA-Z0-9_-]+$"
@@ -200,7 +210,10 @@
     "MaterialGroups#remove": {
       "type": "array",
       "description": "Append material group IDs\nDefined in MaterialGroupSpecification.FACTION.json",
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "items": {
         "type": "string",
         "pattern": "^[a-zA-Z0-9_-]+$"
@@ -291,7 +304,10 @@
     "PrerequisiteFaction": {
       "type": "string",
       "description": "Reference faction for wellbeing unlock\nLeave empty to unlock immediately",
-      "examples": ["Folktails", "IronTeeth"],
+      "examples": [
+        "Folktails",
+        "IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]*$"
     },
     "AverageWellbeingToUnlock": {
@@ -832,14 +848,19 @@
       "type": "string",
       "description": "District center building ID",
       "minLength": 1,
-      "examples": ["DistrictCenter.Folktails", "DistrictCenter.IronTeeth"],
+      "examples": [
+        "DistrictCenter.Folktails",
+        "DistrictCenter.IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
     },
     "SoundId": {
       "type": "string",
       "description": "Faction sound",
       "minLength": 1,
-      "examples": ["Common"],
+      "examples": [
+        "Common"
+      ],
       "default": "Common",
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
@@ -847,7 +868,10 @@
       "type": "string",
       "description": "Bot ID",
       "minLength": 1,
-      "examples": ["Bot.Folktails", "Bot.IronTeeth"],
+      "examples": [
+        "Bot.Folktails",
+        "Bot.IronTeeth"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
     },
     "WonderCompletionFlavorLocKey": {
@@ -911,6 +935,8 @@
       "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
     }
   },
-  "required": ["Id"],
+  "required": [
+    "Id"
+  ],
   "minProperties": 2
 }

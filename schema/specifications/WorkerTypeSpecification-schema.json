@@ -1,13 +1,17 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Worker type specification",
-  "description": "Add or modify a worker type",
+  "description": "DEPRECATED, use 'Blueprints/WorkerTypes/WorkerType.TYPE.json' instead\nAdd or modify a worker type",
   "type": "object",
+  "deprecated": true,
   "properties": {
     "Id": {
       "type": "string",
       "minLength": 1,
-      "examples": ["Beaver", "Bot"],
+      "examples": [
+        "Beaver",
+        "Bot"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "BackwardCompatibleIds": {
@@ -35,14 +39,20 @@
       "type": "string",
       "description": "Worker type name loc key",
       "minLength": 1,
-      "examples": ["Beaver.PluralDisplayName", "Bot.PluralDisplayName"],
+      "examples": [
+        "Beaver.PluralDisplayName",
+        "Bot.PluralDisplayName"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
     },
     "WorkerOnlyTextLocKey": {
       "type": "string",
       "default": "Worker type only loc key",
       "minLength": 1,
-      "examples": ["Work.BeaverOnly", "Work.BotOnly"],
+      "examples": [
+        "Work.BeaverOnly",
+        "Work.BotOnly"
+      ],
       "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
     },
     "IgnoresWorkingHours": {
