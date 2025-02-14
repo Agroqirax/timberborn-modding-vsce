@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bonus type specification",
+  "description": "Add or modify a bonus type",
+  "type": "object",
+  "properties": {
+    "BonusTypeSpec": {
+      "type": "object",
+      "description": "Bonus type specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "Bonus to modify",
+          "examples": [
+            "CarryingCapacity",
+            "CuttingSuccessChance",
+            "GrowthSpeed",
+            "LifeExpectancy",
+            "MovementSpeed",
+            "WorkingSpeed"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "LocKey": {
+          "type": "string",
+          "description": "Bonus type name lockey",
+          "examples": [
+            "Bonus.CarryingCapacity",
+            "Bonus.CuttingSuccessChance",
+            "Bonus.GrowthSpeed",
+            "Bonus.LifeExpectancy",
+            "Bonus.MovementSpeed",
+            "Bonus.WorkingSpeed"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "MinimumValue": {
+          "type": "number",
+          "description": "Lowest possible value"
+        },
+        "MaximumValue": {
+          "type": "number",
+          "description": "Highest possible value"
+        },
+        "Icon": {
+          "type": "string",
+          "description": "Bonus icon",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "BonusTypeSpec"
+  ]
+}

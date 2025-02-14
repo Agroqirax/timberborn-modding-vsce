@@ -4,15 +4,15 @@
     "body": [
       "{",
       "  \"Id\": \"$1\",",
-      "  \"LocKey\": \"Bonus.$2\",",
-      "  \"MinimumValue\": $3,",
-      "  \"MaximumValue\": $4,",
-      "  \"Icon\": $5",
+      "  \"LocKey\": \"Bonus.$1\",",
+      "  \"MinimumValue\": $2,",
+      "  \"MaximumValue\": $3,",
+      "  \"Icon\": $4",
       "}"
     ],
     "description": "Add or modify a bonus type",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "FactionSpecification": {
     "prefix": "faction-specification",
@@ -75,7 +75,7 @@
     ],
     "description": "Add or modify a faction",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "GoodGroupSpecification": {
     "prefix": "goodgroup-specification",
@@ -90,7 +90,7 @@
     ],
     "description": "Add or modify a good group",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "GoodSpecification": {
     "prefix": "good-specification",
@@ -119,7 +119,7 @@
     ],
     "description": "Add or modify a good",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "KeyBindingGroupSpecification": {
     "prefix": "keybindinggroup-specification",
@@ -132,7 +132,7 @@
     ],
     "description": "Add or modify a keybinding group",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "keyBindingSpecification": {
     "prefix": "keybinding-specification",
@@ -146,7 +146,7 @@
     ],
     "description": "Add or modify a keybinding",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "MaterialGroupSpecification": {
     "prefix": "materialgroup-specification",
@@ -160,7 +160,7 @@
     ],
     "description": "Add or modify a meterial group",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "ModelAttachementSpecification": {
     "prefix": "modelattachement-specification",
@@ -188,7 +188,7 @@
     ],
     "description": "Add or modify a model attachement",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "NeedGroupSpecification": {
     "prefix": "needgroup-specification",
@@ -201,7 +201,7 @@
     ],
     "description": "Add or modify a need group",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "NeedSpecification": {
     "prefix": "need-specification",
@@ -233,14 +233,14 @@
     ],
     "description": "Add or modify a need",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "NeedAffectedBySoakednessSpecification": {
     "prefix": "needaffectedbysoakedness-specification",
     "body": ["{", "  \"NeedId\": \"$1\",", "  \"PointsPerHour\": $2", "}", ""],
     "description": "Add or modify a need affected by soakedness",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "NeedAffectingWorkSpecification": {
     "prefix": "needaffectingwork-specification",
@@ -254,7 +254,7 @@
     ],
     "description": "Add or modify a need ffecting work",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "PrefabGroupSpecification": {
     "prefix": "prefabgroup-specification",
@@ -269,7 +269,7 @@
     ],
     "description": "Add or modify a prefab group",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "RecipeSpecification": {
     "prefix": "recipe-specification",
@@ -306,7 +306,7 @@
     ],
     "description": "Add or modify a recipe",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "RemoveYieldStrategySpecification": {
     "prefix": "removeyieldstrategy-specification",
@@ -321,7 +321,7 @@
     ],
     "description": "Add or modify a modify yield strategy",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "TailDecalSpecification": {
     "prefix": "taildecal-specification",
@@ -333,7 +333,7 @@
     ],
     "description": "Add or modify a tail decal",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "ToolGroupSpecification": {
     "prefix": "toolgroup-specification",
@@ -349,7 +349,7 @@
     ],
     "description": "Add or modify a tool group",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "WellbeingTierSpecification": {
     "prefix": "wellbeingtier-specification",
@@ -369,7 +369,7 @@
     ],
     "description": "Add or modify a wellbeing tier",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "WorkerOutfitSpecification": {
     "prefix": "workeroutfit-specification",
@@ -387,7 +387,7 @@
     ],
     "description": "Add or modify a worker outfit",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "WorkerTypeSpecification": {
     "prefix": "workertype-specification",
@@ -402,13 +402,13 @@
     ],
     "description": "Add or modify a worker type",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   },
   "YieldRemovalChanceBonusSpecification": {
     "prefix": "yieldremovalchancebonus-specification",
     "body": ["{", "  \"BonusId\": \"$1\",", "  \"GoodId\": \"$2\"", "}", ""],
     "description": "Add or modify a yield removal chance bonus",
     "isFileTemplate": true,
-    "scope": "json,jsonl,jsonc"
+    "scope": "json.jsonc,jsonl"
   }
 }

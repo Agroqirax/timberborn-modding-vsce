@@ -272,151 +272,169 @@
         "fileMatch": [
           "**/manifest.json"
         ],
-        "url": "./schema/manifest-schema.json"
+        "url": "./schema/manifest.schema.json"
       },
       {
         "fileMatch": [
           "**/mod.json"
         ],
-        "url": "./schema/mod-schema.json"
+        "url": "./schema/mod.schema.json"
       },
       {
         "fileMatch": [
           "**/workshop_data.json"
         ],
-        "url": "./schema/workshop_data-schema.json"
+        "url": "./schema/workshop_data.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/BonusTypes/BonusTypeSpecification.*.json"
         ],
-        "url": "./schema/specifications/BonusTypeSpecification-schema.json"
+        "url": "./schema/specifications/BonusTypeSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Factions/FactionSpecification.*.json"
         ],
-        "url": "./schema/specifications/FactionSpecification-schema.json"
+        "url": "./schema/specifications/FactionSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/GoodGroups/GoodGroupSpecification.*.json"
         ],
-        "url": "./schema/specifications/GoodGroupSpecification-schema.json"
+        "url": "./schema/specifications/GoodGroupSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Goods/GoodSpecification.*.json"
         ],
-        "url": "./schema/specifications/GoodSpecification-schema.json"
+        "url": "./schema/specifications/GoodSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/KeyBindingGroups/KeyBindingGroupSpecification.*.json"
         ],
-        "url": "./schema/specifications/KeyBindingGroupSpecification-schema.json"
+        "url": "./schema/specifications/KeyBindingGroupSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/KeyBindings/*/KeyBindingSpecification.*.json"
         ],
-        "url": "./schema/specifications/KeyBindingSpecification-schema.json"
+        "url": "./schema/specifications/KeyBindingSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/MaterialGroups/MaterialGroupSpecification.*.json"
         ],
-        "url": "./schema/specifications/MaterialGroupSpecification-schema.json"
+        "url": "./schema/specifications/MaterialGroupSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/ModelAttachment/*/ModelAttachmentSpecification.*.*.*.json"
         ],
-        "url": "./schema/specifications/ModelAttachmentSpecification-schema.json"
+        "url": "./schema/specifications/ModelAttachmentSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/NeedGroups/NeedGroupSpecification.*.json"
         ],
-        "url": "./schema/specifications/NeedGroupSpecification-schema.json"
+        "url": "./schema/specifications/NeedGroupSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Needs/NeedSpecification.*.json"
         ],
-        "url": "./schema/specifications/NeedSpecification-schema.json"
+        "url": "./schema/specifications/NeedSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/NeedsAffectedBySoakedness/NeedsAffectedBySoakednessSpecification.*.json"
         ],
-        "url": "./schema/specifications/NeedsAffectedBySoakednessSpecification-schema.json"
+        "url": "./schema/specifications/NeedsAffectedBySoakednessSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/NeedsAffectingWork/NeedsAffectingWorkSpecification.*.json"
         ],
-        "url": "./schema/specifications/NeedsAffectingWorkSpecification-schema.json"
+        "url": "./schema/specifications/NeedsAffectingWorkSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/PrefabGroupSpecification/PrefabGroupSpecification.*.*.json"
         ],
-        "url": "./schema/specifications/PrefabGroupSpecification-schema.json"
+        "url": "./schema/specifications/PrefabGroupSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/Recipes/RecipeSpecification.*.json"
         ],
-        "url": "./schema/specifications/RecipeSpecification-schema.json"
+        "url": "./schema/specifications/RecipeSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/RemoveYieldStrategies/RemoveYieldStrategySpecification.*.json"
         ],
-        "url": "./schema/specifications/RemoveYieldStrategySpecification-schema.json"
+        "url": "./schema/specifications/RemoveYieldStrategySpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/TailDecals/TailDecalSpecification.*.*.json"
         ],
-        "url": "./schema/specifications/TailDecalSpecification-schema.json"
+        "url": "./schema/specifications/TailDecalSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/ToolGroups/ToolGroupSpecification.*.*.json"
         ],
-        "url": "./schema/specifications/ToolgroupSpecification-schema.json"
+        "url": "./schema/specifications/ToolgroupSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/WellbeingTiers/WellbeingTierSpecification.*.*.json"
         ],
-        "url": "./schema/specifications/WellbeingTierSpecification-schema.json"
+        "url": "./schema/specifications/WellbeingTierSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/WorkerOutfits/WorkerOutfitSpecification.*.*.*.json"
         ],
-        "url": "./schema/specifications/WorkerOutfitSpecification-schema.json"
+        "url": "./schema/specifications/WorkerOutfitSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/WorkerTypes/WorkerTypeSpecification.*.*.json"
         ],
-        "url": "./schema/specifications/WorkerTypeSpecification-schema.json"
+        "url": "./schema/specifications/WorkerTypeSpecification.schema.json"
       },
       {
         "fileMatch": [
           "**/Specifications/YieldRemovalChanceBonuses/YieldRemovalChanceBonusSpecification.*.*.json"
         ],
-        "url": "./schema/specifications/YieldRemovalChanceBonusSpecification-schema.json"
+        "url": "./schema/specifications/YieldRemovalChanceBonusSpecification.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/BonusTypes/BonusType.*.json"
+        ],
+        "url": "./schema/blueprints/BonusType.schema.json"
       },
       {
         "fileMatch": [
           "**/Blueprints/Factions/Faction.*.json"
         ],
-        "url": "./schema/blueprints/Faction-schema.json"
+        "url": "./schema/blueprints/Faction.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/Goods/Good.*.json"
+        ],
+        "url": "./schema/blueprints/Good.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/Recipes/Recipe.*.json"
+        ],
+        "url": "./schema/blueprints/Recipe.schema.json"
       }
     ],
     "walkthroughs": [

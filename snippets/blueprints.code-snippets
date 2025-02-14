@@ -1,1 +1,19 @@
-{}
+{
+  "BonusTypeBlueprint": {
+    "prefix": "bonustype-blueprint",
+    "body": [
+      "{",
+      "  \"BonusTypeSpec\": {",
+      "    \"Id\": \"$1\",",
+      "    \"LocKey\": \"Bonus.$1\",",
+      "    \"MinimumValue\": $2,",
+      "    \"MaximumValue\": $3,",
+      "     \"Icon\": $4",
+      "  }",
+      "}"
+    ],
+    "description": "Add or modify a bonus type",
+    "isFileTemplate": true,
+    "scope": "json,jsonc,jsonl"
+  }
+}

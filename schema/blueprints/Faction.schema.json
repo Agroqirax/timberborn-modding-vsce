@@ -118,12 +118,14 @@
           "description": "Adult beaver textures",
           "items": {
             "type": "string",
+            "description": "Texture path",
             "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Materials/Beavers/Folktails/Adult/BeaverAdult1.Folktails",
             "Materials/Beavers/IronTeeth/Adult/BeaverAdult1.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "Textures#append": {
@@ -131,12 +133,14 @@
           "description": "Append adult beaver textures",
           "items": {
             "type": "string",
+            "description": "Texture path",
             "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Materials/Beavers/Folktails/Adult/BeaverAdult1.Folktails",
             "Materials/Beavers/IronTeeth/Adult/BeaverAdult1.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "Textures#remove": {
@@ -144,12 +148,14 @@
           "description": "Remove adult beaver textures",
           "items": {
             "type": "string",
+            "description": "Texture path",
             "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Materials/Beavers/Folktails/Adult/BeaverAdult1.Folktails",
             "Materials/Beavers/IronTeeth/Adult/BeaverAdult1.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "ChildTextures": {
@@ -157,12 +163,14 @@
           "description": "Child beaver textures",
           "items": {
             "type": "string",
+            "description": "Texture path",
             "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Materials/Beavers/Folktails/Adult/BeaverChild1.Folktails",
             "Materials/Beavers/IronTeeth/Adult/BeaverChild1.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "ChildTextures#append": {
@@ -170,12 +178,14 @@
           "description": "Append child beaver textures",
           "items": {
             "type": "string",
+            "description": "Texture path",
             "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Materials/Beavers/Folktails/Adult/BeaverChild1.Folktails",
             "Materials/Beavers/IronTeeth/Adult/BeaverChild1.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "ChildTextures#remove": {
@@ -183,12 +193,14 @@
           "description": "Remove child beaver textures",
           "items": {
             "type": "string",
+            "description": "Texture path",
             "pattern": "^([a-zA-Z0-9_-]+\\/)*[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Materials/Beavers/Folktails/Adult/BeaverChild1.Folktails",
             "Materials/Beavers/IronTeeth/Adult/BeaverChild1.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "MaterialGroups": {
@@ -196,12 +208,14 @@
           "description": "Material group IDs\nDefined in MeterialGroups/MaterialGroup.FACTION.json",
           "items": {
             "type": "string",
+            "description": "Material group ID",
             "pattern": "^[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Folktails",
             "IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "MaterialGroups#append": {
@@ -209,12 +223,14 @@
           "description": "Append material group IDs\nDefined in MeterialGroups/MaterialGroup.FACTION.json",
           "items": {
             "type": "string",
+            "description": "Material group ID",
             "pattern": "^[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Folktails",
             "IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "MaterialGroups#remove": {
@@ -222,12 +238,14 @@
           "description": "Remove material group IDs\nDefined in MeterialGroups/MaterialGroup.FACTION.json",
           "items": {
             "type": "string",
+            "description": "Material group ID",
             "pattern": "^[a-zA-Z0-9_-]+$"
           },
           "examples": [
             "Folktails",
             "IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "PrefabGroups": {
@@ -235,6 +253,7 @@
           "description": "Prefab group IDs\nDefined in PrefabGroups/PrefabGroup.CATEGORY.FACTION.json",
           "items": {
             "type": "string",
+            "description": "Prefab group ID",
             "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
           },
           "examples": [
@@ -253,6 +272,7 @@
             "PowerShaftVariants.IronTeeth",
             "PumpPipeSegments.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "PrefabGroups#append": {
@@ -260,6 +280,7 @@
           "description": "Append prefab group IDs\nDefined in PrefabGroups/PrefabGroup.CATEGORY.FACTION.json",
           "items": {
             "type": "string",
+            "description": "Prefab group ID",
             "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
           },
           "examples": [
@@ -278,6 +299,7 @@
             "PowerShaftVariants.IronTeeth",
             "PumpPipeSegments.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "PrefabGroups#remove": {
@@ -285,6 +307,7 @@
           "description": "Remove prefab group IDs\nDefined in PrefabGroups/PrefabGroup.CATEGORY.FACTION.json",
           "items": {
             "type": "string",
+            "description": "Prefab group ID",
             "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
           },
           "examples": [
@@ -303,6 +326,7 @@
             "PowerShaftVariants.IronTeeth",
             "PumpPipeSegments.IronTeeth"
           ],
+          "uniqueItems": true,
           "minItems": 1
         },
         "PathMaterial": {
@@ -318,6 +342,11 @@
         "Needs": {
           "type": "array",
           "description": "Faction needs\nDefined in Needs/Need.NEED.json",
+          "items": {
+            "type": "string",
+            "description": "Need ID",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
           "examples": [
             "Agora",
             "Antidote",
@@ -385,15 +414,17 @@
             "TributeToIngenuity",
             "WindTunnel"
           ],
-          "items": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9_-]+$"
-          },
+          "uniqueItems": true,
           "minItems": 1
         },
         "Needs#append": {
           "type": "array",
           "description": "Append faction needs\nDefined in Needs/Need.NEED.json",
+          "items": {
+            "type": "string",
+            "description": "Need ID",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
           "examples": [
             "Agora",
             "Antidote",
@@ -461,15 +492,17 @@
             "TributeToIngenuity",
             "WindTunnel"
           ],
-          "items": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9_-]+$"
-          },
+          "uniqueItems": true,
           "minItems": 1
         },
         "Needs#remove": {
           "type": "array",
           "description": "Remove faction needs\nDefined in Needs/Need.NEED.json",
+          "items": {
+            "type": "string",
+            "description": "Need ID",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
           "examples": [
             "Agora",
             "Antidote",
@@ -537,15 +570,17 @@
             "TributeToIngenuity",
             "WindTunnel"
           ],
-          "items": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9_-]+$"
-          },
+          "uniqueItems": true,
           "minItems": 1
         },
         "Goods": {
           "type": "array",
           "description": "Faction goods\nDefined in Goods/Good.GOOD.json",
+          "items": {
+            "type": "string",
+            "description": "Good ID",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
           "examples": [
             "Antidote",
             "Badwater",
@@ -606,14 +641,17 @@
             "Mushroom",
             "Soybean"
           ],
-          "items": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9_-]+$"
-          }
+          "uniqueItems": true,
+          "minItems": 1
         },
         "Goods#append": {
           "type": "array",
           "description": "Append faction goods\nDefined in Goods/Good.GOOD.json",
+          "items": {
+            "type": "string",
+            "description": "Good ID",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
           "examples": [
             "Antidote",
             "Badwater",
@@ -674,14 +712,17 @@
             "Mushroom",
             "Soybean"
           ],
-          "items": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9_-]+$"
-          }
+          "uniqueItems": true,
+          "minItems": 1
         },
         "Goods#remove": {
           "type": "array",
           "description": "Remove faction goods\nDefined in Goods/Good.GOOD.json",
+          "items": {
+            "type": "string",
+            "description": "Good ID",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          },
           "examples": [
             "Antidote",
             "Badwater",
@@ -742,31 +783,35 @@
             "Mushroom",
             "Soybean"
           ],
-          "items": {
-            "type": "string",
-            "pattern": "^[a-zA-Z0-9_-]+$"
-          }
+          "uniqueItems": true,
+          "minItems": 1
         },
         "NeedModifications": {
           "type": "array",
           "description": "Need modifications",
           "items": {
-            "properties": {}
-          }
+            "description": "Need modification"
+          },
+          "uniqueItems": true,
+          "minItems": 1
         },
         "NeedModifications#append": {
           "type": "array",
           "description": "Append need modifications",
           "items": {
-            "properties": {}
-          }
+            "description": "Need modification"
+          },
+          "uniqueItems": true,
+          "minItems": 1
         },
         "NeedModifications#remove": {
           "type": "array",
           "description": "Remove need modifications",
           "items": {
-            "properties": {}
-          }
+            "description": "Need modification"
+          },
+          "uniqueItems": true,
+          "minItems": 1
         },
         "StartingBuildingId": {
           "type": "string",
@@ -819,14 +864,14 @@
           "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         }
       },
-      "minItems": 1,
       "required": [
         "Id"
-      ]
+      ],
+      "minItems": 2
     },
     "UnlockableFactionSpec": {
       "type": "object",
-      "description": "Requirements to unlock faction",
+      "description": "Unlock faction specification",
       "properties": {
         "PrerequisiteFaction": {
           "type": "string",
