@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prefabgroup specification",
+  "description": "Add or modify a prefabgroup",
+  "type": "object",
+  "properties": {
+    "PrefabGroupSpec": {
+      "type": "object",
+      "description": "Prefabgroup specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the prefabgroup to be modified",
+          "minLength": 1
+        },
+        "Paths": {
+          "type": "array",
+          "description": "Paths",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+          }
+        },
+        "Paths#append": {
+          "type": "array",
+          "description": "Append paths",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+          }
+        },
+        "Paths#remove": {
+          "type": "array",
+          "description": "Remove paths",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+          }
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "PrefabGroupSpec"
+  ]
+}

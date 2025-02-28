@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Removeyieldstrategy specification",
+  "description": "Add or modify a removeyieldstrategy",
+  "type": "object",
+  "properties": {
+    "RemoveYieldStrategySpec": {
+      "type": "object",
+      "description": "Removeyieldstrategy specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the removeyieldstrategy to be modified",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "CompatibleResourceGroups": {
+          "type": "array",
+          "description": "Compatible resource groups",
+          "examples": [],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "CompatibleResourceGroups#append": {
+          "type": "array",
+          "description": "Append compatible resource groups",
+          "examples": [],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "CompatibleResourceGroups#remove": {
+          "type": "array",
+          "description": "Remove compatible resource groups",
+          "examples": [],
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "Animation": {
+          "type": "string",
+          "description": "Animation",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "RemoveYieldStrategySpec"
+  ]
+}

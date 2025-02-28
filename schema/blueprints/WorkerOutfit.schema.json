@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workeroutfit specification",
+  "description": "Add or modify a worker outfit",
+  "type": "object",
+  "properties": {
+    "WorkerOutfitSpec": {
+      "type": "object",
+      "description": "Workeroutfit specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the workeroutfit to be modified",
+          "minLength": 1
+        },
+        "FactionId": {
+          "type": "string",
+          "description": "Faction ID",
+          "examples": [
+            "Folktails",
+            "IronTeeth"
+          ],
+          "minLength": 1
+        },
+        "WorkerType": {
+          "type": "string",
+          "description": "Worker type",
+          "examples": [
+            "Beaver",
+            "Bot"
+          ],
+          "minLength": 1
+        },
+        "DiffuseTexture": {
+          "type": "string",
+          "description": "Diffuse texture",
+          "minLength": 1
+        },
+        "NormalTexture": {
+          "type": "string",
+          "description": "Normal texture",
+          "minLength": 1
+        },
+        "Attachments": {
+          "type": "array",
+          "description": "Attachments",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          }
+        },
+        "Attachments#append": {
+          "type": "array",
+          "description": "Append attachments",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          }
+        },
+        "Attachments#remove": {
+          "type": "array",
+          "description": "Remove attachments",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+          }
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "WorkerOutfitSpec"
+  ]
+}

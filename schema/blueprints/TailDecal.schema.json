@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Taildecal specification",
+  "description": "Add or modify a taildecal",
+  "type": "object",
+  "properties": {
+    "TailDecalSpec": {
+      "type": "object",
+      "description": "Taildecal specification",
+      "properties": {
+        "FactionId": {
+          "type": "string",
+          "description": "Faction ID",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "Texture": {
+          "type": "string",
+          "description": "Texture",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        }
+      },
+      "required": [
+        "FactionId",
+        "Texture"
+      ]
+    }
+  },
+  "required": [
+    "TailDecalSpec"
+  ]
+}

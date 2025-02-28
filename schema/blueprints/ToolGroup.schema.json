@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Toolgroup specification",
+  "description": "Add or modify a toolgroup",
+  "type": "object",
+  "properties": {
+    "ToolGroupSpec": {
+      "type": "object",
+      "description": "Toolgroup specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the toolgroup to be modified",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "Order": {
+          "type": "string",
+          "description": "Order",
+          "minLength": 1
+        },
+        "NameLocKey": {
+          "type": "string",
+          "description": "Name lockey",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "Icon": {
+          "type": "string",
+          "description": "Icon path",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "FallbackGroup": {
+          "type": "boolean",
+          "description": "Fallback group",
+          "default": false
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "ToolGroupSpec"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workertype specification",
+  "description": "Add or modify a workertype",
+  "type": "object",
+  "properties": {
+    "WorkerTypeSpec": {
+      "type": "object",
+      "description": "Workertype specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the workertype to be modified",
+          "minLength": 1
+        },
+        "BackwardCompatibleIds": {
+          "type": "array",
+          "description": "Backwardcompatible IDs",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]+$"
+          }
+        },
+        "DisplayNameLocKey": {
+          "type": "string",
+          "description": "Display name lockey",
+          "minLength": 1
+        },
+        "WorkerOnlyTextLocKey": {
+          "type": "string",
+          "description": "Worker only text lockey",
+          "minLength": 1
+        },
+        "IgnoresWorkingHours": {
+          "type": "boolean",
+          "description": "Ignores working hours",
+          "default": false
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "WorkerTypeSpec"
+  ]
+}

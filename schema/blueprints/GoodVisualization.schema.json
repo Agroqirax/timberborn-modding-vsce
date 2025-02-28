@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GoodVisualization specification",
+  "description": "Add or modify a goodvisualization",
+  "type": "object",
+  "properties": {
+    "GoodVisualizationSpec": {
+      "type": "object",
+      "description": "Goodvisualization specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the goodvisualization to be modified",
+          "minLength": 1
+        },
+        "Variant": {
+          "type": "string",
+          "description": "Variant",
+          "minLength": 1
+        },
+        "Offset": {
+          "type": "object",
+          "description": "Offset",
+          "properties": {
+            "X": {
+              "type": "number",
+              "description": "X Offset"
+            },
+            "Y": {
+              "type": "number",
+              "description": "Y Offset"
+            },
+            "Z": {
+              "type": "number",
+              "description": "Z Offset"
+            }
+          },
+          "required": [
+            "X",
+            "Y",
+            "Z"
+          ]
+        },
+        "LimitingAmount": {
+          "type": "number",
+          "description": "Limiting amount"
+        },
+        "PrimaryMesh": {
+          "type": "string",
+          "description": "Primary mesh",
+          "minLength": 1
+        },
+        "Material": {
+          "type": "string",
+          "description": "Material",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    }
+  },
+  "required": [
+    "GoodVisualizationSpec"
+  ]
+}

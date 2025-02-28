@@ -9,7 +9,9 @@
     "config": { "iconPath": "./icons/config.svg" },
     "file": { "iconPath": "./icons/file.svg" },
     "folder": { "iconPath": "./icons/folder.svg" },
+    "folder-code": { "iconPath": "./icons/folder-code.svg" },
     "folder-config": { "iconPath": "./icons/folder-config.svg" },
+    "folder-special": { "iconPath": "./icons/folder-special.svg" },
     "folder-open": { "iconPath": "./icons/folder-open.svg" },
     "history": { "iconPath": "./icons/history.svg" },
     "home": { "iconPath": "./icons/home.svg" },
@@ -63,7 +65,9 @@
   },
   "folderNames": {
     "blueprints": "folder-config",
-    "specifications": "folder-config"
+    "specifications": "folder-config",
+    "root": "folder-special",
+    "scripts": "folder-code"
   },
   "folderNamesExpanded": {}
 }

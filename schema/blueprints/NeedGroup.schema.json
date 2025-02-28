@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Needgroup specification",
+  "description": "Add or modify a needgroup",
+  "type": "object",
+  "properties": {
+    "NeedGroupSpec": {
+      "type": "object",
+      "description": "Needgroup specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the needgroup to be modified",
+          "minLength": 1
+        },
+        "Order": {
+          "type": "number",
+          "description": "Order in the needs menu"
+        },
+        "DisplayNameLocKey": {
+          "type": "string",
+          "description": "Display name lockey",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "Id",
+        "Order",
+        "DisplayNameLocKey"
+      ]
+    }
+  },
+  "required": [
+    "NeedGroupSpec"
+  ]
+}

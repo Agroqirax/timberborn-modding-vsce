@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Need specification",
+  "description": "Add or modify a need",
+  "type": "object",
+  "properties": {
+    "NeedSpec": {
+      "type": "object",
+      "description": "Need specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the need to be modified",
+          "minLength": 1
+        },
+        "BackwardCompatibleIds": {
+          "type": "array",
+          "description": "Old need IDs",
+          "items": {
+            "type": "string",
+            "description": "Need ID",
+            "minLength": 1
+          }
+        },
+        "BackwardCompatibleIds#append": {
+          "type": "array",
+          "description": "Append old need IDs",
+          "items": {
+            "type": "string",
+            "description": "Need ID",
+            "minLength": 1
+          }
+        },
+        "BackwardCompatibleIds#remove": {
+          "type": "array",
+          "description": "Remove old need IDs",
+          "items": {
+            "type": "string",
+            "description": "Need ID",
+            "minLength": 1
+          }
+        },
+        "Order": {
+          "type": "number",
+          "description": "Order in the needs menu"
+        },
+        "NeedGroupId": {
+          "type": "string",
+          "description": "Need group ID",
+          "minLength": 1
+        },
+        "CharacterType": {
+          "type": "string",
+          "description": "Character type",
+          "examples": [
+            "Beaver",
+            "Bot"
+          ],
+          "minLength": 1
+        },
+        "DisplayNameLocKey": {
+          "type": "string",
+          "description": "Display name lockey",
+          "minLength": 1
+        },
+        "StartingValue": {
+          "type": "number",
+          "description": "Starting value"
+        },
+        "MinimumValue": {
+          "type": "number",
+          "description": "Minimum value"
+        },
+        "MaximumValue": {
+          "type": "number",
+          "description": "Maximum value"
+        },
+        "DailyDelta": {
+          "type": "number",
+          "description": "Daily subtraction"
+        },
+        "ImportanceMultiplier": {
+          "type": "number",
+          "description": "Importance multiplier"
+        },
+        "CriticalNeedType": {
+          "type": "object",
+          "description": "Critical need type",
+          "properties": {
+            "Value": {
+              "type": "string",
+              "description": "Value",
+              "default": "None",
+              "examples": [
+                "None",
+                "State"
+              ],
+              "minLength": 1
+            }
+          },
+          "required": [
+            "Value"
+          ]
+        },
+        "CriticalSpriteName": {
+          "type": "string",
+          "description": "Critical sprite name",
+          "minLength": 1
+        },
+        "CriticalDescriptionLocKey": {
+          "type": "string",
+          "description": "Critical description lockey",
+          "minLength": 1
+        },
+        "Penalties": {
+          "type": "array",
+          "description": "Penalties",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "Id",
+              "MultiplierDelta"
+            ],
+            "properties": {
+              "Id": {
+                "type": "string",
+                "description": "Penalty ID",
+                "minLength": 1
+              },
+              "MultiplierDelta": {
+                "type": "number",
+                "description": "Multiplier delta"
+              }
+            }
+          }
+        },
+        "Penalties#append": {
+          "type": "array",
+          "description": "Append penalties",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "Id",
+              "MultiplierDelta"
+            ],
+            "properties": {
+              "Id": {
+                "type": "string",
+                "description": "Penalty ID",
+                "minLength": 1
+              },
+              "MultiplierDelta": {
+                "type": "number",
+                "description": "Multiplier delta"
+              }
+            }
+          }
+        },
+        "Penalties#remove": {
+          "type": "array",
+          "description": "Remove penalties",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "Id",
+              "MultiplierDelta"
+            ],
+            "properties": {
+              "Id": {
+                "type": "string",
+                "description": "Penalty ID",
+                "minLength": 1
+              },
+              "MultiplierDelta": {
+                "type": "number",
+                "description": "Multiplier delta"
+              }
+            }
+          }
+        },
+        "Effectiveness": {
+          "type": "number",
+          "description": "Effectiveness"
+        },
+        "Wastable": {
+          "type": "boolean",
+          "description": "Wastable"
+        },
+        "FavorableWellbeing": {
+          "type": "number",
+          "description": "Favorable wellbeing"
+        },
+        "UnfavorableWellbeing": {
+          "type": "number",
+          "description": "Unfavorable wellbeing"
+        }
+      },
+      "required": [
+        "Id"
+      ],
+      "minItems": 2
+    },
+    "LethalNeedSpec": {
+      "type": "object",
+      "description": "Lethal need specification",
+      "properties": {
+        "DeathWarningLocKey": {
+          "type": "string",
+          "description": "Death warning lockey",
+          "minLength": 1
+        },
+        "DeathMessageLocKey": {
+          "type": "string",
+          "description": "Death message lockey",
+          "minLength": 1
+        }
+      },
+      "required": [],
+      "minItems": 1
+    }
+  },
+  "required": [],
+  "minItems": 1
+}

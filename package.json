@@ -420,9 +420,21 @@
       },
       {
         "fileMatch": [
+          "**/Blueprints/CustomCursors/CustomCursor.*.json"
+        ],
+        "url": "./schema/blueprints/CustomCursorBonusType.schema.json"
+      },
+      {
+        "fileMatch": [
           "**/Blueprints/Factions/Faction.*.json"
         ],
         "url": "./schema/blueprints/Faction.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/GoodGroups/GoodGroup.*.json"
+        ],
+        "url": "./schema/blueprints/GoodGroup.schema.json"
       },
       {
         "fileMatch": [
@@ -432,9 +444,93 @@
       },
       {
         "fileMatch": [
+          "**/Blueprints/GoodVisualizations/GoodVisualization.*.json"
+        ],
+        "url": "./schema/blueprints/GoodVisualization.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/KeyBindingGroups/KeyBindingGroup.*.json"
+        ],
+        "url": "./schema/blueprints/KeyBindingGroup.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/KeyBindings/*/KeyBindings.*.json"
+        ],
+        "url": "./schema/blueprints/KeyBinding.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/MaterialGroups/MaterialGroup.*.json"
+        ],
+        "url": "./schema/blueprints/MaterialGroup.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/NeedGroups/NeedGroup.*.json"
+        ],
+        "url": "./schema/blueprints/NeedGroup.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/Needs/Need.*.json"
+        ],
+        "url": "./schema/blueprints/Need.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/PrefabGroups/PrefabGroup.*.*.json"
+        ],
+        "url": "./schema/blueprints/PrefabGroup.schema.json"
+      },
+      {
+        "fileMatch": [
           "**/Blueprints/Recipes/Recipe.*.json"
         ],
         "url": "./schema/blueprints/Recipe.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/RemoveYieldStrategies/RemoveYieldStrategy.*.json"
+        ],
+        "url": "./schema/blueprints/RemoveYieldStrategy.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/TailDecals/TailDecal.*.*.json"
+        ],
+        "url": "./schema/blueprints/TailDecal.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/Toolgroups/ToolGroup.*.json"
+        ],
+        "url": "./schema/blueprints/Toolgroup.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/WellbeingTiers/WellbeingTier.*.json"
+        ],
+        "url": "./schema/blueprints/WellbeingTier.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/WorkerOutfits/WorkerOutfit.*.*.*.json"
+        ],
+        "url": "./schema/blueprints/WorkerOutfit.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/WorkerTypes/WorkerType.*.json"
+        ],
+        "url": "./schema/blueprints/WorkerType.schema.json"
+      },
+      {
+        "fileMatch": [
+          "**/Blueprints/YieldRemovalChanceBonuses/Yieldremovalchancebonus.*.json"
+        ],
+        "url": "./schema/blueprints/Yieldremovalchancebonus.json"
       }
     ],
     "walkthroughs": [

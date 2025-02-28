@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Custom cursor specification",
+  "description": "Add ormodify acustom cursor",
+  "type": "object",
+  "properties": {
+    "CustomCursorSpec": {
+      "type": "object",
+      "description": "Custom cursor specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the cursor to be modified",
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "SmallCursor": {
+          "type": "string",
+          "description": "Path for small cursor",
+          "examples": [
+            "UI/Cursors/BeaverAvatarCursorSmall"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "LargeCursor": {
+          "type": "string",
+          "description": "Path for large cursor",
+          "examples": [
+            "UI/Cursors/BeaverAvatarCursorSmall"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "Hotspot": {
+          "type": "object",
+          "description": "Cursor hotspot",
+          "properties": {
+            "X": {
+              "type": "number",
+              "description": "X Coordinate",
+              "default": 0
+            },
+            "Y": {
+              "type": "number",
+              "description": "Y Coordinate",
+              "default": 0
+            }
+          },
+          "required": [
+            "X",
+            "Y"
+          ]
+        },
+        "SmallCursorOffset": {
+          "type": "object",
+          "description": "Small cursor offset",
+          "properties": {
+            "X": {
+              "type": "number",
+              "description": "X Coordinate",
+              "default": 10
+            },
+            "Y": {
+              "type": "number",
+              "description": "Y Coordinate",
+              "default": 30
+            }
+          },
+          "required": [
+            "X",
+            "Y"
+          ]
+        },
+        "LargeCursorOffset": {
+          "type": "object",
+          "description": "Lare cursor offset",
+          "properties": {
+            "X": {
+              "type": "number",
+              "description": "X Coordinate",
+              "default": 10
+            },
+            "Y": {
+              "type": "number",
+              "description": "Y Coordinate",
+              "default": 30
+            }
+          },
+          "required": [
+            "X",
+            "Y"
+          ]
+        }
+      },
+      "required": [
+        "Id",
+        "SmallCursor",
+        "LargeCursor",
+        "Hotspot",
+        "SmallCursorOffset",
+        "LargeCursorOffset"
+      ]
+    }
+  },
+  "required": [
+    "CustomCursorSpec"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MaterialGroup specification",
+  "description": "Add or modify a materialgroup",
+  "type": "object",
+  "properties": {
+    "MaterialGroupSpec": {
+      "type": "object",
+      "description": "Materialgroup specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the materialgroup to modify",
+          "minLength": 1
+        },
+        "Paths": {
+          "type": "array",
+          "description": "Material paths",
+          "items": {
+            "type": "string",
+            "description": "Path",
+            "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+          }
+        },
+        "Paths#append": {
+          "type": "array",
+          "description": "Append material paths",
+          "items": {
+            "type": "string",
+            "description": "Path",
+            "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+          }
+        },
+        "Paths#remove": {
+          "type": "array",
+          "description": "Remove material paths",
+          "items": {
+            "type": "string",
+            "description": "Path",
+            "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+          }
+        }
+      },
+      "required": [
+        "Id",
+        "Paths"
+      ]
+    }
+  },
+  "required": [
+    "MaterialGroupSpec"
+  ]
+}

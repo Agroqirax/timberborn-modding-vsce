@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KeyBinding specification",
+  "description": "Add or modify a keybinding",
+  "type": "object",
+  "properties": {
+    "KeyBindingSpec": {
+      "type": "object",
+      "description": "KeyBinding specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the keybinding to be modified",
+          "minLength": 1
+        },
+        "GroupId": {
+          "type": "string",
+          "description": "ID of the keybindinggroup",
+          "minLength": 1
+        },
+        "LocKey": {
+          "type": "string",
+          "description": "Display name lockey",
+          "minLength": 1
+        },
+        "Order": {
+          "type": "number",
+          "description": "Order in the group"
+        }
+      },
+      "required": [
+        "Id",
+        "GroupId",
+        "LocKey",
+        "Order"
+      ]
+    }
+  },
+  "required": [
+    "KeyBindingSpec"
+  ]
+}

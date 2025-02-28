@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wellbeingtier specification",
+  "description": "Add or modify a wellbeing tier",
+  "type": "object",
+  "properties": {
+    "WellbeingTierSpec": {
+      "type": "object",
+      "description": "Wellbeing tier specification",
+      "properties": {
+        "CharacterType": {
+          "type": "string",
+          "description": "Charactert type",
+          "examples": [
+            "BeaverAdult",
+            "bot",
+            "BeaverChild"
+          ],
+          "minLength": 1
+        },
+        "BonusId": {
+          "type": "string",
+          "description": "Bonus ID",
+          "minLength": 1
+        },
+        "Bonuses": {
+          "type": "array",
+          "description": "Bonuses",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "properties": {
+              "Wellbeing": {
+                "type": "number",
+                "description": "Wellbeing"
+              },
+              "Multiplier": {
+                "type": "number",
+                "default": "Multiplier"
+              }
+            },
+            "required": [
+              "Wellbeing",
+              "Multiplier"
+            ]
+          }
+        },
+        "Bonuses#append": {
+          "type": "array",
+          "description": "Append bonuses",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "properties": {
+              "Wellbeing": {
+                "type": "number",
+                "description": "Wellbeing"
+              },
+              "Multiplier": {
+                "type": "number",
+                "default": "Multiplier"
+              }
+            },
+            "required": [
+              "Wellbeing",
+              "Multiplier"
+            ]
+          }
+        },
+        "Bonuses#remove": {
+          "type": "array",
+          "description": "Remove bonuses",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "properties": {
+              "Wellbeing": {
+                "type": "number",
+                "description": "Wellbeing"
+              },
+              "Multiplier": {
+                "type": "number",
+                "default": "Multiplier"
+              }
+            },
+            "required": [
+              "Wellbeing",
+              "Multiplier"
+            ]
+          }
+        },
+        "WellbeingThreshold": {
+          "type": "number",
+          "description": "Wellbeing threshold"
+        },
+        "MultiplierIncrement": {
+          "type": "number",
+          "default": "Multiplier increment"
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "WellbeingTierSpec"
+  ]
+}

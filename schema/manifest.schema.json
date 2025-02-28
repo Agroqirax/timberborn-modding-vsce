@@ -48,9 +48,7 @@
       "uniqueItems": true,
       "minItems": 0,
       "items": {
-        "required": [
-          "Id"
-        ],
+        "description": "Mod",
         "properties": {
           "Id": {
             "type": "string",
@@ -66,7 +64,10 @@
             "default": "0.1",
             "pattern": "^[0-9]+(\\.[0-9]+)*$"
           }
-        }
+        },
+        "required": [
+          "Id"
+        ]
       }
     },
     "OptionalMods": {
@@ -75,9 +76,7 @@
       "uniqueItems": true,
       "minItems": 0,
       "items": {
-        "required": [
-          "Id"
-        ],
+        "description": "Mod",
         "properties": {
           "Id": {
             "type": "string",
@@ -93,7 +92,10 @@
             "default": "0.1",
             "pattern": "^[0-9]+(\\.[0-9]+)*$"
           }
-        }
+        },
+        "required": [
+          "Id"
+        ]
       }
     }
   },

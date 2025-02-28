@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Good group specification",
+  "description": "Addor modify agood group",
+  "type": "object",
+  "properties": {
+    "GoodGroupSpec": {
+      "type": "object",
+      "description": "Good group specification",
+      "properties": {
+        "Id": {
+          "type": "string",
+          "description": "ID of the good group to be modified",
+          "examples": [
+            "Food",
+            "Ingredients",
+            "Log",
+            "Materials",
+            "Water"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "Order": {
+          "type": "number",
+          "description": "Place in the top bar"
+        },
+        "DisplayNameLocKey": {
+          "type": "string",
+          "description": "Display name lockey",
+          "examples": [
+            "TopBar.Food",
+            "TopBar.Ingredients",
+            "TopBar.Log",
+            "TopBar.Materials",
+            "TopBar.Water"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
+        },
+        "Icon": {
+          "type": "string",
+          "description": "Good group icon",
+          "examples": [
+            "Sprites/TopBar/Food",
+            "Sprites/TopBar/Ingredients",
+            "Sprites/TopBar/Log",
+            "Sprites/TopBar/Materials",
+            "Sprites/TopBar/Water"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
+        },
+        "SingleResourceGroup": {
+          "type": "boolean",
+          "description": "Group with single resource"
+        }
+      },
+      "required": [
+        "Id",
+        "Order",
+        "DisplayNameLocKey",
+        "Icon",
+        "SingleResourceGroup"
+      ]
+    }
+  },
+  "required": [
+    "GoodGroupSpec"
+  ]
+}
