@@ -10,7 +10,7 @@
       "  \"Icon\": $4",
       "}"
     ],
-    "description": "Add or modify a bonus type",
+    "description": "[DEPRECATED] Add or modify a bonus type",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -73,7 +73,7 @@
       "  \"GameOverFlavorLocKey\": \"Faction.$1.GameOver.Flavor\"",
       "}"
     ],
-    "description": "Add or modify a faction",
+    "description": "[DEPRECATED] Add or modify a faction",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -88,7 +88,7 @@
       "  \"SingleResourceGroup\": false",
       "}"
     ],
-    "description": "Add or modify a good group",
+    "description": "[DEPRECATED] Add or modify a good group",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -117,7 +117,7 @@
       "}",
       ""
     ],
-    "description": "Add or modify a good",
+    "description": "[DEPRECATED] Add or modify a good",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -130,7 +130,7 @@
       "  \"LocKey\": \"KeyBindingGroup.$1\"",
       "}"
     ],
-    "description": "Add or modify a keybinding group",
+    "description": "[DEPRECATED] Add or modify a keybinding group",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -144,7 +144,7 @@
       "  \"Order\": $3",
       "}"
     ],
-    "description": "Add or modify a keybinding",
+    "description": "[DEPRECATED] Add or modify a keybinding",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -158,7 +158,7 @@
       "  ]",
       "}"
     ],
-    "description": "Add or modify a meterial group",
+    "description": "[DEPRECATED] Add or modify a meterial group",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -186,7 +186,7 @@
       "  }",
       "}"
     ],
-    "description": "Add or modify a model attachement",
+    "description": "[DEPRECATED] Add or modify a model attachement",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -199,7 +199,7 @@
       "  \"DisplayNameLocKey\": \"NeedGroup.$1.DisplayName\"",
       "}"
     ],
-    "description": "Add or modify a need group",
+    "description": "[DEPRECATED] Add or modify a need group",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -231,14 +231,14 @@
       "  \"FavorableWellbeing\": $14",
       "}"
     ],
-    "description": "Add or modify a need",
+    "description": "[DEPRECATED] Add or modify a need",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
   "NeedAffectedBySoakednessSpecification": {
     "prefix": "needaffectedbysoakedness-specification",
     "body": ["{", "  \"NeedId\": \"$1\",", "  \"PointsPerHour\": $2", "}", ""],
-    "description": "Add or modify a need affected by soakedness",
+    "description": "[DEPRECATED] Add or modify a need affected by soakedness",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -252,7 +252,7 @@
       "}",
       ""
     ],
-    "description": "Add or modify a need ffecting work",
+    "description": "[DEPRECATED] Add or modify a need ffecting work",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -267,7 +267,7 @@
       "}",
       ""
     ],
-    "description": "Add or modify a prefab group",
+    "description": "[DEPRECATED] Add or modify a prefab group",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -304,7 +304,7 @@
       "  \"Icon\": \"Sprites/Goods/$1Icon\"",
       "}"
     ],
-    "description": "Add or modify a recipe",
+    "description": "[DEPRECATED] Add or modify a recipe",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -319,7 +319,7 @@
       "  \"Animation\": \"$2\"",
       "}"
     ],
-    "description": "Add or modify a modify yield strategy",
+    "description": "[DEPRECATED] Add or modify a modify yield strategy",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -331,7 +331,7 @@
       "  \"Texture\": \"Materials/Beavers/$1/Tails/Tail1.$1\"",
       "}"
     ],
-    "description": "Add or modify a tail decal",
+    "description": "[DEPRECATED] Add or modify a tail decal",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -347,7 +347,7 @@
       "}",
       ""
     ],
-    "description": "Add or modify a tool group",
+    "description": "[DEPRECATED] Add or modify a tool group",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -367,7 +367,7 @@
       "  \"MultiplierIncrement\": $6",
       "}"
     ],
-    "description": "Add or modify a wellbeing tier",
+    "description": "[DEPRECATED] Add or modify a wellbeing tier",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -385,7 +385,7 @@
       "  ]",
       "}"
     ],
-    "description": "Add or modify a worker outfit",
+    "description": "[DEPRECATED] Add or modify a worker outfit",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
@@ -400,14 +400,14 @@
       "  \"IgnoresWorkingHours\": false",
       "}"
     ],
-    "description": "Add or modify a worker type",
+    "description": "[DEPRECATED] Add or modify a worker type",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   },
   "YieldRemovalChanceBonusSpecification": {
     "prefix": "yieldremovalchancebonus-specification",
     "body": ["{", "  \"BonusId\": \"$1\",", "  \"GoodId\": \"$2\"", "}", ""],
-    "description": "Add or modify a yield removal chance bonus",
+    "description": "[DEPRECATED] Add or modify a yield removal chance bonus",
     "isFileTemplate": true,
     "scope": "json.jsonc,jsonl"
   }
