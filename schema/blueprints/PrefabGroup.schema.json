@@ -11,7 +11,8 @@
         "Id": {
           "type": "string",
           "description": "ID of the prefabgroup to be modified",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "Paths": {
           "type": "array",

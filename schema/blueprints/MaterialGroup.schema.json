@@ -11,7 +11,13 @@
         "Id": {
           "type": "string",
           "description": "ID of the materialgroup to modify",
-          "minLength": 1
+          "examples": [
+            "Common",
+            "Folktails",
+            "IronTeeth"
+          ],
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "Paths": {
           "type": "array",
@@ -42,9 +48,9 @@
         }
       },
       "required": [
-        "Id",
-        "Paths"
-      ]
+        "Id"
+      ],
+      "minItems": 2
     }
   },
   "required": [

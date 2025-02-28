@@ -11,7 +11,8 @@
         "Id": {
           "type": "string",
           "description": "ID of the need to be modified",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "BackwardCompatibleIds": {
           "type": "array",
@@ -19,7 +20,8 @@
           "items": {
             "type": "string",
             "description": "Need ID",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$"
           }
         },
         "BackwardCompatibleIds#append": {
@@ -28,7 +30,8 @@
           "items": {
             "type": "string",
             "description": "Need ID",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$"
           }
         },
         "BackwardCompatibleIds#remove": {
@@ -37,7 +40,8 @@
           "items": {
             "type": "string",
             "description": "Need ID",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "^[a-zA-Z0-9_-]+$"
           }
         },
         "Order": {
@@ -47,7 +51,8 @@
         "NeedGroupId": {
           "type": "string",
           "description": "Need group ID",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "CharacterType": {
           "type": "string",
@@ -56,12 +61,14 @@
             "Beaver",
             "Bot"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "DisplayNameLocKey": {
           "type": "string",
           "description": "Display name lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         },
         "StartingValue": {
           "type": "number",
@@ -105,12 +112,14 @@
         "CriticalSpriteName": {
           "type": "string",
           "description": "Critical sprite name",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
         },
         "CriticalDescriptionLocKey": {
           "type": "string",
           "description": "Critical description lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         },
         "Penalties": {
           "type": "array",
@@ -126,7 +135,8 @@
               "Id": {
                 "type": "string",
                 "description": "Penalty ID",
-                "minLength": 1
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9_-]+$"
               },
               "MultiplierDelta": {
                 "type": "number",
@@ -149,7 +159,8 @@
               "Id": {
                 "type": "string",
                 "description": "Penalty ID",
-                "minLength": 1
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9_-]+$"
               },
               "MultiplierDelta": {
                 "type": "number",
@@ -172,7 +183,8 @@
               "Id": {
                 "type": "string",
                 "description": "Penalty ID",
-                "minLength": 1
+                "minLength": 1,
+                "pattern": "^[a-zA-Z0-9_-]+$"
               },
               "MultiplierDelta": {
                 "type": "number",
@@ -210,12 +222,14 @@
         "DeathWarningLocKey": {
           "type": "string",
           "description": "Death warning lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         },
         "DeathMessageLocKey": {
           "type": "string",
           "description": "Death message lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         }
       },
       "required": [],

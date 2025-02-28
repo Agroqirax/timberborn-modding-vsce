@@ -11,7 +11,8 @@
         "Id": {
           "type": "string",
           "description": "ID of the needgroup to be modified",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "Order": {
           "type": "number",
@@ -20,14 +21,14 @@
         "DisplayNameLocKey": {
           "type": "string",
           "description": "Display name lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         }
       },
       "required": [
-        "Id",
-        "Order",
-        "DisplayNameLocKey"
-      ]
+        "Id"
+      ],
+      "minItems": 2
     }
   },
   "required": [

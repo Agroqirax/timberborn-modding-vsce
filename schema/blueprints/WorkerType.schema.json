@@ -11,7 +11,8 @@
         "Id": {
           "type": "string",
           "description": "ID of the workertype to be modified",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "BackwardCompatibleIds": {
           "type": "array",
@@ -24,12 +25,14 @@
         "DisplayNameLocKey": {
           "type": "string",
           "description": "Display name lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         },
         "WorkerOnlyTextLocKey": {
           "type": "string",
           "description": "Worker only text lockey",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         },
         "IgnoresWorkingHours": {
           "type": "boolean",

@@ -11,7 +11,8 @@
         "Id": {
           "type": "string",
           "description": "ID of the goodvisualization to be modified",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)*$"
         },
         "Variant": {
           "type": "string",
@@ -48,12 +49,14 @@
         "PrimaryMesh": {
           "type": "string",
           "description": "Primary mesh",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
         },
         "Material": {
           "type": "string",
           "description": "Material",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
         }
       },
       "required": [

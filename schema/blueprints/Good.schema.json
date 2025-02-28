@@ -75,10 +75,10 @@
         },
         "BackwardCompatibleIds": {
           "type": "array",
-          "description": "Old IDs of this good",
+          "description": "Backward compatible IDs",
           "items": {
             "type": "string",
-            "description": "Old ID of this good",
+            "description": "Good ID",
             "examples": [
               "Antidote",
               "Badwater",
@@ -145,10 +145,10 @@
         },
         "BackwardCompatibleIds#append": {
           "type": "array",
-          "description": "Append old IDs of this good",
+          "description": "Append backward compatible IDs",
           "items": {
             "type": "string",
-            "description": "Old ID of this good",
+            "description": "Good ID",
             "examples": [
               "Antidote",
               "Badwater",
@@ -215,10 +215,10 @@
         },
         "BackwardCompatibleIds#remove": {
           "type": "array",
-          "description": "Remove old IDs of this good",
+          "description": "Remove backward compatible IDs",
           "items": {
             "type": "string",
-            "description": "Old ID of this good",
+            "description": "Good ID",
             "examples": [
               "Antidote",
               "Badwater",

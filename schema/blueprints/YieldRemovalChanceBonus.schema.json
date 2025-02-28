@@ -14,7 +14,8 @@
           "examples": [
             "CuttingSuccessChance"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "GoodId": {
           "type": "string",
@@ -22,7 +23,8 @@
           "examples": [
             "Log"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         }
       },
       "required": [

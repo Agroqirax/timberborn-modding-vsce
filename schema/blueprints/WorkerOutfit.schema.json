@@ -11,7 +11,8 @@
         "Id": {
           "type": "string",
           "description": "ID of the workeroutfit to be modified",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "FactionId": {
           "type": "string",
@@ -20,7 +21,8 @@
             "Folktails",
             "IronTeeth"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "WorkerType": {
           "type": "string",
@@ -29,17 +31,20 @@
             "Beaver",
             "Bot"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "DiffuseTexture": {
           "type": "string",
           "description": "Diffuse texture",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
         },
         "NormalTexture": {
           "type": "string",
           "description": "Normal texture",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+(\\/[a-zA-Z0-9_-]+)*$"
         },
         "Attachments": {
           "type": "array",

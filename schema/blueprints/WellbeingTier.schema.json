@@ -16,12 +16,14 @@
             "bot",
             "BeaverChild"
           ],
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "BonusId": {
           "type": "string",
           "description": "Bonus ID",
-          "minLength": 1
+          "minLength": 1,
+          "pattern": "^[a-zA-Z0-9_-]+$"
         },
         "Bonuses": {
           "type": "array",

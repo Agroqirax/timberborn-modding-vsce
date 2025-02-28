@@ -29,11 +29,9 @@
         }
       },
       "required": [
-        "Id",
-        "GroupId",
-        "LocKey",
-        "Order"
-      ]
+        "Id"
+      ],
+      "minItems": 2
     }
   },
   "required": [

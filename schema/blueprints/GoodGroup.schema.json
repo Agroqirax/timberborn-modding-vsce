@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Good group specification",
-  "description": "Addor modify agood group",
+  "description": "Add or modify agood group",
   "type": "object",
   "properties": {
     "GoodGroupSpec": {
@@ -23,7 +23,7 @@
         },
         "Order": {
           "type": "number",
-          "description": "Place in the top bar"
+          "description": "Order in the top bar"
         },
         "DisplayNameLocKey": {
           "type": "string",
@@ -57,12 +57,9 @@
         }
       },
       "required": [
-        "Id",
-        "Order",
-        "DisplayNameLocKey",
-        "Icon",
-        "SingleResourceGroup"
-      ]
+        "Id"
+      ],
+      "minItems": 2
     }
   },
   "required": [
